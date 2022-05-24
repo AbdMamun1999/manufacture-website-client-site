@@ -14,7 +14,6 @@ const Navbar = () => {
         return <Loading></Loading>
     }
 
-
     const handleLogOut = () => {
         signOut(auth)
         navigate('/login')

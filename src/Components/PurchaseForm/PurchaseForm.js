@@ -1,0 +1,79 @@
+import React, { useState } from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../firebase.init';
+
+const PurchaseForm = ({ product }) => {
+    const [user] = useAuthState(auth)
+    const [quantityError, setQuantityError] = useState('')
+    const { name, available_quantity, minimum_quantity, price } = product
+    const handleSubmit = event => {
+        event.preventDefault()
+        console.log(event)
+        const productName = name;
+        const userName = user?.displayName;
+        const email = user?.email;
+        const address = event.target.address.value;
+        const phone = event.target.phone.value;
+        const purchaseQuantity = parseInt(event.target.quantity.value);
+        console.log(event?.target)
+        if (available_quantity < purchaseQuantity) {
+            setQuantityError(<p className='text-red-600'>Sorry!you ordered more than In Stack</p>)
+            return;
+        } else if (purchaseQuantity < minimum_quantity) {
+            setQuantityError(<p className='text-red-600'>You  have to ordere more than In $`{minimum_quantity}`</p>)
+            return;
+        } else {
+
+        }
+    }
+
+    return (
+        <div class="card  bg-base-100 shadow-xl">
+            <div class="card-body ">
+                <h2 class="card-title">Card title!</h2>
+                <form
+                    onSubmit={handleSubmit}
+                    className='grid grid-cols-1 justify-items-center gap-4'>
+                    <input
+                        type="text"
+                        value={`${user?.displayName}`} readOnly disabled
+                        class="input input-bordered w-full max-w-xs" />
+                    <input
+                        type="text"
+                        value={`${user?.email}`} readOnly disabled
+                        class="input input-bordered w-full max-w-xs" />
+                    <input
+                        type="text"
+                        name='phone'
+                        placeholder="Phone number"
+                        class="input input-bordered w-full max-w-xs" required />
+                    <input
+                        type="text"
+                        name='address'
+                        placeholder="Your Address"
+                        class="input input-bordered w-full max-w-xs" required />
+
+                    <div class="w-full max-w-xs mt-[-5]">
+                        <label class="label">
+                            <span class="label-text font-bold">You have to purchase minimun 2000 pices</span>
+                            {quantityError}
+                        </label>
+                        <input
+                            type="text"
+                            name='quantity'
+                            value={`${minimum_quantity}`}
+                            class="input input-bordered w-full max-w-xs" />
+                    </div>
+
+                    <input
+                        type="submit"
+                        value='BUY NOW'
+                        placeholder="Type here"
+                        class="btn btn-primary w-full max-w-xs" />
+                </form>
+            </div>
+        </div>
+    );
+};
+
+export default PurchaseForm;

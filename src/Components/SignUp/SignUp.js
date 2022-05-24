@@ -37,7 +37,7 @@ const SignUp = () => {
 
     const onSubmit = async data => {
         const { name, email, password, confirmPassword } = data;
-        if (!(password === confirmPassword)) {
+        if (password !== confirmPassword) {
             setPasswordDontMatch(<p className='text-red-600'>Password and Confirm Password do not match</p>)
             console.log(confirmPassword)
         } else {
