@@ -39,33 +39,33 @@ const SignUp = () => {
         const { name, email, password, confirmPassword } = data;
         if (password !== confirmPassword) {
             setPasswordDontMatch(<p className='text-red-600'>Password and Confirm Password do not match</p>)
-            console.log(confirmPassword)
+            
         } else {
             await createUserWithEmailAndPassword(email, password)
             await updateProfile({ displayName: name })
         }
     }
 
-    console.log(user)
+   
 
     const handleSignInWithGoogle = () => {
         signInWithGoogle()
     }
     return (
-        <div class="hero  min-h-screen bg-base-200">
-            <div class="hero-content w-4/6">
-                <div class="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100 ">
-                    <div class="card-body ">
+        <div className="hero  min-h-screen bg-base-200">
+            <div className="hero-content w-4/6">
+                <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100 ">
+                    <div className="card-body ">
                         <h2 className='card-title'>Register To ........</h2>
                         <form onSubmit={handleSubmit(onSubmit)}>
-                            <div class="form-control">
-                                {/*   <label class="label">
-                                <span class="label-text">Email</span>
+                            <div className="form-control">
+                                {/*   <label className="label">
+                                <span className="label-text">Email</span>
                             </label> */}
                                 <input
                                     type="text"
                                     placeholder="Your name"
-                                    class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-black-600 dark:border-gray-600 dark:focus:border-black-500 focus:outline-none focus:ring-0 focus:border-black-600 peer"
+                                    className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-black-600 dark:border-gray-600 dark:focus:border-black-500 focus:outline-none focus:ring-0 focus:border-black-600 peer"
                                     {...register("name", {
                                         required: {
                                             value: true,
@@ -73,18 +73,18 @@ const SignUp = () => {
                                         }
 
                                     })} />
-                                <label class="label">
-                                    {errors?.email?.type === 'required' && <span class="label-text-alt text-red-600">{errors?.email.message}</span>}
+                                <label className="label">
+                                    {errors?.email?.type === 'required' && <span className="label-text-alt text-red-600">{errors?.email.message}</span>}
                                 </label>
                             </div>
-                            <div class="form-control">
-                                {/*   <label class="label">
-                                <span class="label-text">Email</span>
+                            <div className="form-control">
+                                {/*   <label className="label">
+                                <span className="label-text">Email</span>
                             </label> */}
                                 <input
                                     type="email"
                                     placeholder="email"
-                                    class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-black-600 dark:border-gray-600 dark:focus:border-black-500 focus:outline-none focus:ring-0 focus:border-black-600 peer"
+                                    className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-black-600 dark:border-gray-600 dark:focus:border-black-500 focus:outline-none focus:ring-0 focus:border-black-600 peer"
                                     {...register("email", {
                                         required: {
                                             value: true,
@@ -95,19 +95,19 @@ const SignUp = () => {
                                             message: 'Provide a valid email'
                                         }
                                     })} />
-                                <label class="label">
-                                    {errors?.email?.type === 'required' && <span class="label-text-alt text-red-600">{errors?.email.message}</span>}
-                                    {errors?.email?.type === 'pattern' && <span class="label-text-alt text-red-600">{errors?.email.message}</span>}
+                                <label className="label">
+                                    {errors?.email?.type === 'required' && <span className="label-text-alt text-red-600">{errors?.email.message}</span>}
+                                    {errors?.email?.type === 'pattern' && <span className="label-text-alt text-red-600">{errors?.email.message}</span>}
                                 </label>
                             </div>
-                            <div class="form-control">
-                                {/*   <label class="label">
-                                <span class="label-text">Email</span>
+                            <div className="form-control">
+                                {/*   <label className="label">
+                                <span className="label-text">Email</span>
                             </label> */}
                                 <input
                                     type="password"
                                     placeholder="password"
-                                    class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-black-600 dark:border-gray-600 dark:focus:border-black-500 focus:outline-none focus:ring-0 focus:border-black-600 peer"
+                                    className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-black-600 dark:border-gray-600 dark:focus:border-black-500 focus:outline-none focus:ring-0 focus:border-black-600 peer"
                                     {...register("password", {
                                         required: {
                                             value: true,
@@ -118,48 +118,48 @@ const SignUp = () => {
                                             message: 'Minimum eight characters, at least one uppercase letter, one lowercase letter, one number and one special character'
                                         }
                                     })} />
-                                <label class="label">
-                                    {errors?.password?.type === 'required' && <span class="label-text-alt text-red-600">{errors?.password.message}</span>}
-                                    {errors?.password?.type === 'pattern' && <span class="label-text-alt text-red-600">{errors?.password.message}</span>}
+                                <label className="label">
+                                    {errors?.password?.type === 'required' && <span className="label-text-alt text-red-600">{errors?.password.message}</span>}
+                                    {errors?.password?.type === 'pattern' && <span className="label-text-alt text-red-600">{errors?.password.message}</span>}
                                 </label>
                             </div>
-                            <div class="form-control">
-                                {/* <label class="label">
-                                <span class="label-text">Password</span>
+                            <div className="form-control">
+                                {/* <label className="label">
+                                <span className="label-text">Password</span>
                             </label> */}
                                 <input
                                     type="password"
                                     placeholder="confirm password"
-                                    class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-black-600 dark:border-gray-600 dark:focus:border-black-500 focus:outline-none focus:ring-0 focus:border-black-600 peer"
+                                    className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-black-600 dark:border-gray-600 dark:focus:border-black-500 focus:outline-none focus:ring-0 focus:border-black-600 peer"
                                     {...register("confirmPassword", {
                                         required: {
                                             value: true,
                                             message: 'Confirm password is Require'
                                         }
                                     })} />
-                                <label class="label">
-                                    {errors?.confirmPassword?.type === 'required' && <span class="label-text-alt text-red-600">{errors?.confirmPassword.message}</span>}
+                                <label className="label">
+                                    {errors?.confirmPassword?.type === 'required' && <span className="label-text-alt text-red-600">{errors?.confirmPassword.message}</span>}
                                     {passwordDontMatch}
                                 </label>
                             </div>
                             <div>
                                 {errorMassage}
                             </div>
-                            <input type="submit" class="btn btn-primary  w-full max-w-xs text-white" value='Sign up' />
+                            <input type="submit" className="btn btn-primary  w-full max-w-xs text-white" value='Sign up' />
                         </form>
                         <div>
-                            <p class="text-center">
+                            <p className="text-center">
                                 Already have an account?
-                                <span class="label-text font-bold"><Link to='/login'>login</Link></span>
+                                <span className="label-text font-bold"><Link to='/login'>login</Link></span>
                             </p>
                         </div>
 
-                        <div class="divider">OR</div>
+                        <div className="divider">OR</div>
                         <button
                             onClick={handleSignInWithGoogle}
                             type="button"
-                            class="text-white bg-[#4285F4] hover:bg-[#4285F4]/90 focus:ring-4 focus:outline-none focus:ring-[#4285F4]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-[#4285F4]/55 mr-2 mb-2">
-                            <svg class="w-4 h-4 mr-2 -ml-1" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="google" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 488 512"><path fill="currentColor" d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z"></path></svg>
+                            className="text-white bg-[#4285F4] hover:bg-[#4285F4]/90 focus:ring-4 focus:outline-none focus:ring-[#4285F4]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-[#4285F4]/55 mr-2 mb-2">
+                            <svg className="w-4 h-4 mr-2 -ml-1" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="google" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 488 512"><path fill="currentColor" d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z"></path></svg>
                             Sign in with Google
                         </button>
                     </div>

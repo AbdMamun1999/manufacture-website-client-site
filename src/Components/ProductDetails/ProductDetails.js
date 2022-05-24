@@ -5,14 +5,14 @@ const ProductDetails = ({product}) => {
 
     return (
         <div>
-             <div class="card lg:card-side bg-base-100 shadow-xl">
+             <div className="card lg:card-side bg-base-100 shadow-xl">
                 <figure>
                     <img src="https://api.lorem.space/image/album?w=400&h=400" alt="" />
                 </figure>
-                <div class="card-body">
-                <h1 class="text-2xl font-bold">{product.name}</h1>
+                <div className="card-body">
+                <h1 className="text-2xl font-bold">{product.name}</h1>
                         <p className='text-xl'>Price:<span className='text-2xl text-primary'> ${product.price}</span></p>
-                        <div class="divider"></div>
+                        <div className="divider"></div>
                         <ul>
                             <li>Brand:{product.brand}</li>
                             <li>style:{product.style}</li>

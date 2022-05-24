@@ -54,48 +54,48 @@ const PurchaseForm = ({ product }) => {
 
 
     return (
-        <div class="card  bg-base-100 shadow-xl">
-            <div class="card-body ">
-                <h2 class="card-title">Order Now</h2>
+        <div className="card  bg-base-100 shadow-xl">
+            <div className="card-body ">
+                <h2 className="card-title">Order Now</h2>
                 <form
                     onSubmit={handleSubmit}
                     className='grid grid-cols-1 justify-items-center gap-4'>
                     <input
                         type="text"
                         value={`${user?.displayName}`} readOnly disabled
-                        class="input input-bordered w-full max-w-xs" />
+                        className="input input-bordered w-full max-w-xs" />
                     <input
                         type="text"
                         value={`${user?.email}`} readOnly disabled
-                        class="input input-bordered w-full max-w-xs" />
+                        className="input input-bordered w-full max-w-xs" />
                     <input
                         type="text"
                         name='phone'
                         placeholder="Phone number"
-                        class="input input-bordered w-full max-w-xs" required />
+                        className="input input-bordered w-full max-w-xs" required />
                     <input
                         type="text"
                         name='address'
                         placeholder="Your Address"
-                        class="input input-bordered w-full max-w-xs" required />
+                        className="input input-bordered w-full max-w-xs" required />
 
-                    <div class="w-full max-w-xs mt-[-5]">
-                        <label class="label">
-                            <span class="label-text font-bold">You have to purchase minimun 2000 pices</span>
+                    <div className="w-full max-w-xs mt-[-5]">
+                        <label className="label">
+                            <span className="label-text font-bold">You have to purchase minimun 2000 pices</span>
                             {quantityError}
                         </label>
                         <input
                             type="text"
                             name='quantity'
                             value={`${minimum_quantity}`}
-                            class="input input-bordered w-full max-w-xs" />
+                            className="input input-bordered w-full max-w-xs" />
                     </div>
 
                     <input
                         type="submit"
                         value='BUY NOW'
                         placeholder="Type here"
-                        class="btn btn-primary w-full max-w-xs" />
+                        className="btn btn-primary w-full max-w-xs" />
                 </form>
             </div>
         </div>
