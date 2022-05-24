@@ -17,7 +17,7 @@ const Purchase = () => {
     }, [])
 
     return (
-        <div className='grid lg:grid-cols-2 gap-5 justify-items-center'>
+        <div className='grid lg:grid-cols-2 gap-5 justify-items-center my-20 lg:w-5/6 mx-auto'>
             <ProductDetails
                 product={product}
                 setProduct={setProduct}

@@ -27,22 +27,15 @@ const Navbar = () => {
         <li><Link to="/contact">Contact</Link></li>
         <li><Link to="/about">About</Link></li>
         {
+            user && <li><Link to="/dashboard">Dashboard</Link></li>
+        }
+        {
             user?.displayName ?
-                <div className='d-flex flex-row'>
                     <button
                         onClick={handleLogOut}
                         className='btn btn-ghost'>
                         logout
                     </button>
-                    <p>{user?.displayName}</p>
-                </div>
-                /*  <div class="dropdown dropdown-end">
-                     <label tabindex="0" class="btn btn-ghost rounded-btn">Dropdown</label>
-                     <ul tabindex="0" class="menu dropdown-content p-2 shadow bg-base-100 rounded-box w-52 mt-4">
-                         <li><Link to=''>Item 1</Link></li>
-                         <li><Link to=''>Item 2</Link></li>
-                     </ul>
-                 </div> */
                 :
                 <li><Link to="/login">Login</Link></li>
         }

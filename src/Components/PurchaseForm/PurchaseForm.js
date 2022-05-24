@@ -1,21 +1,33 @@
+import axios from 'axios';
 import React, { useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
+import { toast } from 'react-toastify';
 import auth from '../../firebase.init';
 
 const PurchaseForm = ({ product }) => {
     const [user] = useAuthState(auth)
     const [quantityError, setQuantityError] = useState('')
-    const { name, available_quantity, minimum_quantity, price } = product
+    const { _id, name, available_quantity, minimum_quantity, price } = product;
+
+
+
     const handleSubmit = event => {
         event.preventDefault()
-        console.log(event)
         const productName = name;
         const userName = user?.displayName;
         const email = user?.email;
         const address = event.target.address.value;
         const phone = event.target.phone.value;
         const purchaseQuantity = parseInt(event.target.quantity.value);
-        console.log(event?.target)
+        const purchaseInfo = {
+            productId:_id,
+            productName,
+            userName,
+            email,
+            address,
+            phone,
+            purchaseQuantity
+        }
         if (available_quantity < purchaseQuantity) {
             setQuantityError(<p className='text-red-600'>Sorry!you ordered more than In Stack</p>)
             return;
@@ -23,14 +35,28 @@ const PurchaseForm = ({ product }) => {
             setQuantityError(<p className='text-red-600'>You  have to ordere more than In $`{minimum_quantity}`</p>)
             return;
         } else {
-
+            // const { data } = axios.post(`http://localhost:5000/orders`,  purchaseInfo )
+            // console.log(data)
+            fetch('http://localhost:5000/orders',{
+                method:'POST',
+                headers:{
+                    'content-type':'application/json',
+                },
+                body:JSON.stringify(purchaseInfo)
+            })
+            .then(res=>res.json())
+            .then(data => {
+                toast.success('Order Completed')
+            })
         }
     }
+
+
 
     return (
         <div class="card  bg-base-100 shadow-xl">
             <div class="card-body ">
-                <h2 class="card-title">Card title!</h2>
+                <h2 class="card-title">Order Now</h2>
                 <form
                     onSubmit={handleSubmit}
                     className='grid grid-cols-1 justify-items-center gap-4'>
