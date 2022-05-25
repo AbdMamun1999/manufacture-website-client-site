@@ -27,7 +27,7 @@ const MyProfile = () => {
             },
             body: JSON.stringify(userInfo)
         })
-            .then(res => res.json(userInfo))
+            .then(res => res.json())
             .then(data => {
                 if (data.modifiedCount > 0) {
                     toast.success("Profile Completed")
@@ -137,7 +137,7 @@ const MyProfile = () => {
                         </label>
                     </div>
                     <div>
-                        <input type="submit" class="btn btn-primary  w-full max-w-xs text-white" value='Sign up' />
+                        <input type="submit" class="btn btn-primary  w-full max-w-xs text-white" value='Submit' />
                     </div>
                 </form>
             </div>

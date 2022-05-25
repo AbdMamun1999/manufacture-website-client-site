@@ -10,10 +10,6 @@ const Navbar = () => {
     const navigate = useNavigate()
 
 
-    if (loading) {
-        return <Loading></Loading>
-    }
-
     const handleLogOut = () => {
         signOut(auth)
         navigate('/login')
@@ -29,7 +25,7 @@ const Navbar = () => {
             user && <li><Link to="/dashboard">Dashboard</Link></li>
         }
         {
-            user?.displayName ?
+            user?
                 <button
                     onClick={handleLogOut}
                     className='btn btn-ghost'>
