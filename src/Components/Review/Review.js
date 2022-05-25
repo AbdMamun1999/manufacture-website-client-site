@@ -1,4 +1,3 @@
-import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
 import { toast } from 'react-toastify';
@@ -6,6 +5,7 @@ import auth from '../../firebase.init';
 import Loading from '../Loading/Loading';
 
 const Review = ({product}) => {
+    
     const [user, loading] = useAuthState(auth)
     const { register, handleSubmit, watch, formState: { errors }, reset } = useForm();
     const {_id,name} = product
@@ -13,9 +13,12 @@ const Review = ({product}) => {
     const userEmail = user?.email;
 
 
+
     if(loading){
         return <Loading></Loading>
     }
+
+   
 
     const onSubmit = data => {
         const {comments} = data
@@ -29,7 +32,6 @@ const Review = ({product}) => {
         })
             .then(res => res.json())
             .then(data => {
-                console.log(data)
                 if (data.acknowledged === true) {
                     toast.success("Profile Completed")
                 }
@@ -44,7 +46,8 @@ const Review = ({product}) => {
                     <h2 class="card-title">
                         Shoes!
                     </h2>
-                    <p>If a dog chews shoes whose shoes does he choose?</p>
+                    <p>
+                    </p>
                 </div>
             </div>
             <div>
