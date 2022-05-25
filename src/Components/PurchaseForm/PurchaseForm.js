@@ -19,6 +19,7 @@ const PurchaseForm = ({ product }) => {
         const address = event.target.address.value;
         const phone = event.target.phone.value;
         const purchaseQuantity = parseInt(event.target.quantity.value);
+        const purchasePrice = price * purchaseQuantity
         const purchaseInfo = {
             productId:_id,
             productName,
@@ -26,7 +27,8 @@ const PurchaseForm = ({ product }) => {
             email,
             address,
             phone,
-            purchaseQuantity
+            purchaseQuantity,
+            purchasePrice
         }
         if (available_quantity < purchaseQuantity) {
             setQuantityError(<p className='text-red-600'>Sorry!you ordered more than In Stack</p>)
