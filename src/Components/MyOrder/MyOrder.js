@@ -17,7 +17,6 @@ const MyOrder = () => {
     return <Loading></Loading>
   }
 
-  console.log(user)
 
   return (
     <div className='grid grid-cols-1 gap-5 lg:px-10 py-10'>

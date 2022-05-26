@@ -7,7 +7,7 @@ const ProductDetails = ({product}) => {
         <div>
              <div className="card lg:card-side bg-base-100 shadow-xl">
                 <figure>
-                    <img src="https://api.lorem.space/image/album?w=400&h=400" alt="" />
+                    <img src={product.img} alt="" />
                 </figure>
                 <div className="card-body">
                 <h1 className="text-2xl font-bold">{product.name}</h1>

@@ -7,13 +7,15 @@ import auth from '../../firebase.init';
 const PurchaseForm = ({ product }) => {
     const [user] = useAuthState(auth)
     const [quantityError, setQuantityError] = useState('')
-    const { _id, name, available_quantity, minimum_quantity, price } = product;
+    const [quantity,setQuantity] = useState('')
+    const { _id, name, available_quantity, minimum_quantity, price,img } = product;
 
     const handleChange = e =>{
         const value = e.target.value
-        console.log(value)
+        setQuantity(value)
     }
 
+    console.log(quantity)
 
 
     const handleSubmit = event => {
@@ -27,6 +29,7 @@ const PurchaseForm = ({ product }) => {
         const purchasePrice = price * purchaseQuantity
         const purchaseInfo = {
             productId:_id,
+            img,
             productName,
             userName,
             email,

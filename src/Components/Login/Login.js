@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
+import useToken from '../../hooks/useToken';
 import Loading from '../Loading/Loading';
 
 
@@ -15,18 +16,22 @@ const Login = () => {
         error,
     ] = useSignInWithEmailAndPassword(auth);
     const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
+
+    const token = useToken(user || gUser)
+
+    let signInError;
     const navigate = useNavigate()
     const location = useLocation()
     const from = location.state?.from?.pathname || "/";
+
 
     if (loading || gLoading) {
         return <Loading></Loading>
     }
 
-    if (user || gUser) {
-        navigate(from, { replace: true });
+    if (error || gError) {
+        signInError = <p className='text-red-500'><small>{error?.message || gError?.message}</small></p>
     }
-
 
     const onSubmit = data => {
         const { email, password } = data;
@@ -37,6 +42,9 @@ const Login = () => {
         signInWithGoogle()
     }
 
+    if (token) {
+        navigate(from, { replace: true });
+    }
 
     return (
         <div className="hero min-h-screen bg-base-200">
@@ -96,6 +104,7 @@ const Login = () => {
                                     {errors?.password?.type === 'required' && <span className="label-text-alt text-red-600">{errors?.password.message}</span>}
                                 </label>
                             </div>
+                            {signInError}
                             <input type="submit" className="btn btn-primary  w-full max-w-xs text-white" value='login' />
                         </form>
 

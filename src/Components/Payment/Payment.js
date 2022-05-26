@@ -1,8 +1,10 @@
 import { Elements } from '@stripe/react-stripe-js';
 import { loadStripe } from '@stripe/stripe-js';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import { useQuery } from 'react-query';
 import { useParams } from 'react-router-dom';
+import auth from '../../firebase.init';
 import CheckoutForm from '../CheckoutForm/CheckoutForm';
 import Loading from '../Loading/Loading';
 
@@ -10,15 +12,17 @@ import Loading from '../Loading/Loading';
 const stripePromise = loadStripe('pk_test_51L3DvlJnTFMOZfncjb4R6gRbXpAmrPs8sz6fonYnNWAswvoIzgz9xwdROIqrXeTCDryWk6YLkgmC8WLbOZOzOju700WvbkcWAu');
 
 const Payment = () => {
+    const [order, setOrder] = useState({})
+    const [user] = useAuthState(auth)
     const { orderId } = useParams()
 
-    const { data: order, isLoading } = useQuery(['order', orderId], () => fetch(`http://localhost:5000/orders/${orderId}`).then(res => res.json()))
+    useEffect(() => {
+        fetch(`http://localhost:5000/order/${orderId}`)
+            .then(res => res.json())
+            .then(data => setOrder(data))
+    }, [orderId])
 
-
-    if (isLoading) {
-        return <Loading></Loading>
-    }
-    
+    console.log(order, 'payment page order')
 
     return (
         <div>

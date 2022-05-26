@@ -2,7 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const Tool = ({ tool }) => {
-    const { _id,name, available_quantity, minimum_quantity, price } = tool;
+    const {img, _id,name, available_quantity, minimum_quantity, price } = tool;
     const navigate = useNavigate()
 
     const handleNavigate = id =>{
@@ -11,7 +11,7 @@ const Tool = ({ tool }) => {
     return (
         <div className="card  bg-base-100 shadow-xl ">
             <figure className="px-10 pt-10">
-                <img src="https://api.lorem.space/image/shoes?w=400&h=225" alt="Shoes" className="rounded-xl" />
+                <img src={img} alt="Shoes" className="rounded-xl" />
             </figure>
             <div className="card-body items-left text-left">
                 <h2 className="card-title">{name}</h2>

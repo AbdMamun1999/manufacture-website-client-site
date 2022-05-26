@@ -9,7 +9,6 @@ const DeleteConfirmModal = ({ id, setDeleteOrder, refetch }) => {
             method: 'DELETE'
         }).then(res => res.json())
             .then(data => {
-                console.log(data)
                 setDeleteOrder(false)
                 refetch()
             })

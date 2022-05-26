@@ -4,6 +4,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useCreateUserWithEmailAndPassword, useSignInWithGoogle, useUpdateProfile } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import Loading from '../Loading/Loading';
+import useToken from '../../hooks/useToken';
 
 
 
@@ -23,6 +24,8 @@ const SignUp = () => {
     const from = location.state?.from?.pathname || "/";
     let errorMassage
 
+    const token = useToken(user||gUser)
+
     if (error || gError || upError) {
         errorMassage = <p className='text-red-600'>{error?.message}||{gError?.message}||{upError?.message}</p>
     }
@@ -31,9 +34,7 @@ const SignUp = () => {
         return <Loading></Loading>
     }
 
-    if (user || gUser) {
-        navigate(from, { replace: true });
-    }
+   
 
     const onSubmit = async data => {
         const { name, email, password, confirmPassword } = data;
@@ -47,10 +48,14 @@ const SignUp = () => {
     }
 
    
-
     const handleSignInWithGoogle = () => {
         signInWithGoogle()
     }
+
+    if (token) {
+        navigate(from, { replace: true });
+    }
+    
     return (
         <div className="hero  min-h-screen bg-base-200">
             <div className="hero-content w-4/6">

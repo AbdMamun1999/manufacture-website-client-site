@@ -4,25 +4,25 @@ import { toast } from 'react-toastify';
 import auth from '../../firebase.init';
 import Loading from '../Loading/Loading';
 
-const Review = ({product}) => {
-    
+const Review = ({ product }) => {
+
     const [user, loading] = useAuthState(auth)
     const { register, handleSubmit, watch, formState: { errors }, reset } = useForm();
-    const {_id,name} = product
+    const { _id, name } = product
     const userName = user?.displayName;
     const userEmail = user?.email;
 
 
 
-    if(loading){
+    if (loading) {
         return <Loading></Loading>
     }
 
-   
+
 
     const onSubmit = data => {
-        const {comments} = data
-        const reviews = {productId:_id,name,userName,userEmail,comments}
+        const { comments } = data
+        const reviews = { productId: _id, name, userName, userEmail, comments }
         fetch(`http://localhost:5000/reviews`, {
             method: 'POST',
             headers: {
@@ -40,11 +40,11 @@ const Review = ({product}) => {
 
     return (
         <div>
-            <div class="card w-96 bg-base-100 shadow-xl mx-auto mt-5">
-                <figure><img src="https://api.lorem.space/image/shoes?w=400&h=225" alt="Shoes" /></figure>
-                <div class="card-body">
-                    <h2 class="card-title">
-                        Shoes!
+            <div className="card w-96 bg-base-100 shadow-xl mx-auto mt-5">
+                <figure><img src={product.img} alt="Shoes" /></figure>
+                <div className="card-body">
+                    <h2 className="card-title">
+                        {product.name.split(0,15)}
                     </h2>
                     <p>
                     </p>
@@ -52,19 +52,19 @@ const Review = ({product}) => {
             </div>
             <div>
                 <form onSubmit={handleSubmit(onSubmit)} >
-                    <div class="form-control mt-8 w-96 mx-auto">
-                        <textarea class="textarea textarea-bordered h-24" placeholder="Whats on your mind?"
+                    <div className="form-control mt-8 w-96 mx-auto">
+                        <textarea className="textarea textarea-bordered h-24" placeholder="Whats on your mind?"
                             {...register("comments", {
                                 required: {
                                     value: true,
                                     message: 'Comments is required'
                                 }
                             })}></textarea>
-                        <label class="label">
-                            {errors?.comments?.type === 'required' && <span class="label-text-alt text-red-600">{errors?.comments.message}</span>}
+                        <label className="label">
+                            {errors?.comments?.type === 'required' && <span className="label-text-alt text-red-600">{errors?.comments.message}</span>}
                         </label>
                         <div>
-                            <input type="submit" class="btn btn-primary  w-full max-w-xs text-white" value='Submit' />
+                            <input type="submit" className="btn btn-primary  w-full max-w-xs text-white" value='Post' />
                         </div>
                     </div>
                 </form>

@@ -11,7 +11,6 @@ const HomePageReviews = () => {
     }, []) 
 
 
-    console.log(reviews)
     return (
 
        <>

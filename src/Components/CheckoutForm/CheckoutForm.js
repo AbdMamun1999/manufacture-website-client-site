@@ -11,23 +11,27 @@ const CheckoutForm = ({ order }) => {
     const [clientSecret, setClientSecret] = useState('')
 
 
-    const {_id, purchasePrice, userName, email } = order
+    const { _id, purchasePrice, userName, email } = order
+    console.log(purchasePrice, 'checkout page purchasePrice')
 
     useEffect(() => {
         // Create PaymentIntent as soon as the page loads
-        fetch("http://localhost:5000/create-payment-intent", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({ purchasePrice })
-        })
-            .then((res) => res.json())
-            .then((data) => {
-                if (data?.clientSecret) {
-                    setClientSecret(data.clientSecret)
-                }
+        if (purchasePrice) {
+            fetch("http://localhost:5000/create-payment-intent", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    authorization: `Bearer ${localStorage.getItem('accessToken')}`
+                },
+                body: JSON.stringify({ purchasePrice })
             })
+                .then((res) => res.json())
+                .then((data) => {
+                    if (data?.clientSecret) {
+                        setClientSecret(data.clientSecret)
+                    }
+                })
+        }
     }, [purchasePrice]);
 
 
@@ -79,25 +83,23 @@ const CheckoutForm = ({ order }) => {
         } else {
             setCardError('')
             setTransactionId(paymentIntent.id)
-            console.log(paymentIntent)
             setSuccess('Congrats! your payment is complete')
 
 
             const payment = {
-                order:_id,
-                transactionId:paymentIntent.id
+                order: _id,
+                transactionId: paymentIntent.id
             }
-            fetch(`http://localhost:5000/orders/${_id}`,{
-                method:'PATCH',
-                headers:{
-                    'content-type':'application/json'
+            fetch(`http://localhost:5000/orders/${_id}`, {
+                method: 'PATCH',
+                headers: {
+                    'content-type': 'application/json'
                 },
-                body:JSON.stringify(payment)
+                body: JSON.stringify(payment)
             })
                 .then(res => res.json())
                 .then(data => {
                     setProcessing(false)
-                    console.log(data)
                 })
         }
 
