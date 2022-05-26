@@ -9,6 +9,11 @@ const PurchaseForm = ({ product }) => {
     const [quantityError, setQuantityError] = useState('')
     const { _id, name, available_quantity, minimum_quantity, price } = product;
 
+    const handleChange = e =>{
+        const value = e.target.value
+        console.log(value)
+    }
+
 
 
     const handleSubmit = event => {
@@ -90,6 +95,7 @@ const PurchaseForm = ({ product }) => {
                             type="text"
                             name='quantity'
                             value={`${minimum_quantity}`}
+                            onChange={handleChange}
                             className="input input-bordered w-full max-w-xs" />
                     </div>
 

@@ -29,12 +29,10 @@ const MyProfile = () => {
         })
             .then(res => res.json())
             .then(data => {
-                if (data.modifiedCount > 0) {
+                console.log(data,'myprofile')
+                if (data.acknowledged === true) {
                     toast.success("Profile Completed")
                 }
-                reset('', {
-                    keepValues: false,
-                })
             })
     }
 

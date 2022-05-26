@@ -6,16 +6,19 @@ import Loading from '../Loading/Loading';
 import Order from '../Order/Order';
 
 const MyOrder = () => {
-  const [user] = useAuthState(auth)
-  console.log(user)
-  const { data: orders, isLoading, refetch} = useQuery('orders', () =>
+  const [user,loading] = useAuthState(auth)
+
+  const { data: orders, isLoading, refetch} = useQuery(['orders',user], () =>
     fetch(`http://localhost:5000/orders/${user?.email}`).then(res =>
       res.json()
     )
   )
-  if (isLoading) {
+  if (isLoading || loading) {
     return <Loading></Loading>
   }
+
+  console.log(user)
+
   return (
     <div className='grid grid-cols-1 gap-5 lg:px-10 py-10'>
       {
