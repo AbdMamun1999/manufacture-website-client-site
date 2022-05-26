@@ -30,8 +30,10 @@ const Order = ({ order, refetch }) => {
                         </Link>
                     }
                     {
-                        (purchasePrice && order.paid) && 
+                        (purchasePrice && order.paid) && <>
                             <span className="text-success">Paid</span>
+                            <span>{order.transactionId}</span>
+                        </>
                     }
                 </div>
             </div>

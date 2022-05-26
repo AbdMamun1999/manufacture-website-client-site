@@ -5,12 +5,13 @@ const CheckoutForm = ({ order }) => {
     const stripe = useStripe();
     const elements = useElements();
     const [cardError, setCardError] = useState('')
-    const [success,setSuccess] = useState('')
-    const [transactionId,setTransactionId] = ('')
+    const [success, setSuccess] = useState('')
+    const [processing, setProcessing] = useState(false)
+    const [transactionId, setTransactionId] = useState('')
     const [clientSecret, setClientSecret] = useState('')
 
-    
-    const { purchasePrice,userName,email } = order
+
+    const {_id, purchasePrice, userName, email } = order
 
     useEffect(() => {
         // Create PaymentIntent as soon as the page loads
@@ -33,6 +34,7 @@ const CheckoutForm = ({ order }) => {
 
     const handleSubmit = async event => {
         event.preventDefault();
+
         if (!stripe || !elements) {
             return
         }
@@ -52,32 +54,52 @@ const CheckoutForm = ({ order }) => {
             setCardError(error?.message)
         } else {
             setCardError('')
-           
+
         }
 
         setSuccess('')
+        setProcessing(true)
         // confirm card payment
-        const {paymentIntent, error:intentError} = await stripe.confirmCardPayment(
+        const { paymentIntent, error: intentError } = await stripe.confirmCardPayment(
             clientSecret,
             {
-              payment_method: {
-                card: card,
-                billing_details: {
-                  name: userName,
-                  email:email
+                payment_method: {
+                    card: card,
+                    billing_details: {
+                        name: userName,
+                        email: email
+                    },
                 },
-              },
             },
-          );
+        );
 
-          if(intentError){
-              setCardError(intentError?.message)
-          }else{
-              setCardError('')
-              setTransactionId(paymentIntent.id)
-              console.log(paymentIntent)
-              setSuccess('Congrats! your payment is complete')
-          }
+        if (intentError) {
+            setCardError(intentError?.message)
+            setProcessing(false)
+        } else {
+            setCardError('')
+            setTransactionId(paymentIntent.id)
+            console.log(paymentIntent)
+            setSuccess('Congrats! your payment is complete')
+
+
+            const payment = {
+                order:_id,
+                transactionId:paymentIntent.id
+            }
+            fetch(`http://localhost:5000/orders/${_id}`,{
+                method:'PATCH',
+                headers:{
+                    'content-type':'application/json'
+                },
+                body:JSON.stringify(payment)
+            })
+                .then(res => res.json())
+                .then(data => {
+                    setProcessing(false)
+                    console.log(data)
+                })
+        }
 
     }
     return (
@@ -110,7 +132,7 @@ const CheckoutForm = ({ order }) => {
                 success && <div className='text-green-600'>
                     <p>{success}</p>
                     <p>Your transation id:{transactionId}</p>
-                    </div>
+                </div>
             }
         </>
     );
