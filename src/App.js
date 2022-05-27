@@ -20,6 +20,8 @@ import ManageProducts from './Components/ManageProducts/ManageProducts';
 import RequireAuth from './Components/RequireAuth/RequireAuth';
 import RequireAdmin from './Components/RequireAdmin/RequireAdmin';
 import Portfolio from './Components/Portfolio/Portfolio';
+import PageNotFound from './Components/PageNotFound/PageNotFound';
+import Blogs from './Components/Blogs/Blogs';
 
 function App() {
   return (
@@ -27,6 +29,7 @@ function App() {
       <Navbar></Navbar>
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
+        <Route path='/blogs' element={<Blogs></Blogs>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/signup' element={<SignUp></SignUp>}></Route>
         <Route path='/portfolio' element={<Portfolio></Portfolio>}></Route>
@@ -49,6 +52,7 @@ function App() {
           <Route path='makeAdmin' element={<RequireAdmin><MakeAdmin></MakeAdmin></RequireAdmin>}></Route>
           <Route path='manageProduct' element={<RequireAdmin><ManageProducts></ManageProducts></RequireAdmin>}></Route>
         </Route>
+        <Route path='*' element={<PageNotFound></PageNotFound>}></Route>
       </Routes>
       <Footer></Footer>
       <ToastContainer />

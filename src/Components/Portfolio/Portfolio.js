@@ -1,9 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Portfolio = () => {
     return (
-        <div>
-            <div class="hero min-h-screen bg-base-200">
+        <div className='mb-5'>
+            {/* <div class="hero min-h-screen bg-base-200">
                 <div class="hero-content text-center">
                     <div class="max-w-md">
                         <h1 class="text-5xl font-bold">Hello there</h1>
@@ -11,15 +12,28 @@ const Portfolio = () => {
                         <button class="btn btn-primary">Get Started</button>
                     </div>
                 </div>
-            </div>
+            </div> */}
             {/* min-h-screen */}
             <div class="hero bg-primary-200 mt-5">
                 <div class="hero-content flex-col lg:flex-row">
-                    <img src="https://image.shutterstock.com/image-photo/portrait-smiling-young-college-student-260nw-1192615495.jpg" class="max-w-sm rounded-lg shadow-2xl" alt='' />
-                    <div>
-                        <h1 class="text-5xl font-bold">Box Office News!</h1>
-                        <p class="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-                        <button class="btn btn-primary">Get Started</button>
+                    <img src="https://i.ibb.co/CQmQ6N7/IMG-20220418-115838-removebg-preview.jpg" class="max-w-sm rounded-lg shadow-2xl" alt='' />
+                    <div className='grid grid-cols-1 gap-y-3'>
+                        <h1 class="text-5xl font-bold">About Me</h1>
+                        <p class="">
+                            <span className='font-bold'>Name: </span>Abdullah Al Mamun
+                        </p>
+                        <p class="">
+                            <span className='font-bold'>Education: </span>Govt. Titumir College
+                        </p>
+                        <p class="">
+                            <span className='font-bold'>Email: </span>abdullahalmamun12121999@gmail.com
+                        </p>
+                        <p class="">
+                            <span className='font-bold'>Educational Background: </span>Accounting
+                        </p>
+                        <p class="">
+                            <span className='font-bold'>List of Technology for web-devoloping: </span>HTML,CSS,JavaScript,React JS,Node JS,Mongodb,Express,git,github,Bootstrap,Tailwind
+                        </p>
                     </div>
                 </div>
             </div>
@@ -28,21 +42,21 @@ const Portfolio = () => {
                 <div className='grid grid-cols-1 lg:grid-cols-3 gap-5 my-10 justify-items-center'>
                     <div class="card w-96 bg-green-400 shadow-xl">
                         <div class="card-body">
-                            <h2 class="card-title">Card title!</h2>
-                            <p>If a dog chews shoes whose shoes does he choose?</p>
+                            <h2 class="card-title">Dental Care</h2>
+                            <p className='font-bold'>project link: <a target='blank' href="https://independent-service-prov-6cce2.firebaseapp.com/">Dental Care</a> </p>
                         </div>
                     </div>
                     <div class="card w-96 bg-blue-400 shadow-xl">
                         <div class="card-body">
-                            <h2 class="card-title">Card title!</h2>
-                            <p>If a dog chews shoes whose shoes does he choose?</p>
+                            <h2 class="card-title">Laptop Bazar</h2>
+                            <p className='font-bold'>project link: <a target='blank' href="https://celadon-pasca-14269c.netlify.app/">Laptop Bazar</a> </p>
 
                         </div>
                     </div>
                     <div class="card w-96 bg-green-400 shadow-xl">
                         <div class="card-body">
-                            <h2 class="card-title">Card title!</h2>
-                            <p>If a dog chews shoes whose shoes does he choose?</p>
+                            <h2 class="card-title">Warehouse management</h2>
+                            <p className='font-bold'>project link:<a target='blank' href='https://warehouse-management-authentic.web.app/'>Warehouse Management</a></p>
                         </div>
                     </div>
                 </div>
@@ -52,11 +66,11 @@ const Portfolio = () => {
                 <div className='grid grid-cols-1 lg:grid-cols-2 gap-10 justify-items-center'>
                     <div className='mt-2'>
                         <h3>HTML5</h3>
-                        <progress class="progress progress-info w-96" value="40" max="100"></progress>
+                        <progress class="progress progress-info w-96" value="90" max="100"></progress>
                     </div>
                     <div className='mt-2'>
                         <h3>CSS3</h3>
-                        <progress class="progress progress-info w-96" value="40" max="100"></progress>
+                        <progress class="progress progress-info w-96" value="90" max="100"></progress>
                     </div>
                     <div className='mt-2'>
                         <h3>JavaScript</h3>
@@ -68,18 +82,12 @@ const Portfolio = () => {
                     </div>
                     <div className='mt-2'>
                         <h3>EXPRESS JS</h3>
-                        <progress class="progress progress-info w-96" value="40" max="100"></progress>
+                        <progress class="progress progress-info w-96" value="30" max="100"></progress>
                     </div>
                     <div className='mt-2'>
                         <h3>MONGODB</h3>
-                        <progress class="progress progress-info w-96" value="40" max="100"></progress>
+                        <progress class="progress progress-info w-96" value="25" max="100"></progress>
                     </div>
-                </div>
-            </div>
-            <div className='mt-5'>
-                <h1 className='text-center font-bold text-2xl'>Others Technology</h1>
-                <div>
-                    
                 </div>
             </div>
         </div>
