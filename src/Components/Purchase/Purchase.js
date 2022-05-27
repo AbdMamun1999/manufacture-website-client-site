@@ -13,7 +13,7 @@ const Purchase = () => {
 
 
     useEffect(() => {
-        fetch(`http://localhost:5000/products/${productId}`,{
+        fetch(`https://agile-dawn-56972.herokuapp.com/products/${productId}`,{
             method: 'GET',
             headers: {
                 'authorization': `Bearer ${localStorage.getItem('accessToken')}`

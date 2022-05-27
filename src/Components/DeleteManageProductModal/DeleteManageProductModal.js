@@ -4,7 +4,7 @@ const DeleteManageProductModal = ({ setDeleteProduct, id }) => {
 
 
     const handleDelete = () => {
-        fetch(`http://localhost:5000/allproducts/${id}`, {
+        fetch(`https://agile-dawn-56972.herokuapp.com/allproducts/${id}`, {
             method: 'DELETE',
             headers: {
                 'content-type': 'application/json',

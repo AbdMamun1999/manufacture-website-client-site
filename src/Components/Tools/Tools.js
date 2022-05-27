@@ -8,7 +8,7 @@ const Tools = () => {
 
 
     useEffect(()=>{
-        fetch('http://localhost:5000/products')
+        fetch('https://agile-dawn-56972.herokuapp.com/products')
         .then(res=>res.json())
         .then(data=>{
             setTools(data)

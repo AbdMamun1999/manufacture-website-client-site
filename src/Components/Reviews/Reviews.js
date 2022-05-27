@@ -12,7 +12,7 @@ const Reviews = () => {
     }, []) */
 
     const { data: products, isLoading, refetch } = useQuery('products', () =>
-        fetch('http://localhost:5000/products').then(res =>
+        fetch('https://agile-dawn-56972.herokuapp.com/products').then(res =>
             res.json()
         )
     )

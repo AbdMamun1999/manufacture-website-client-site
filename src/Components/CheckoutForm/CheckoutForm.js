@@ -17,7 +17,7 @@ const CheckoutForm = ({ order }) => {
     useEffect(() => {
         // Create PaymentIntent as soon as the page loads
         if (purchasePrice) {
-            fetch("http://localhost:5000/create-payment-intent", {
+            fetch("https://agile-dawn-56972.herokuapp.com/create-payment-intent", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -90,7 +90,7 @@ const CheckoutForm = ({ order }) => {
                 order: _id,
                 transactionId: paymentIntent.id
             }
-            fetch(`http://localhost:5000/orders/${_id}`, {
+            fetch(`https://agile-dawn-56972.herokuapp.com/orders/${_id}`, {
                 method: 'PATCH',
                 headers: {
                     'content-type': 'application/json'

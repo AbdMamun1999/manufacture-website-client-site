@@ -48,7 +48,7 @@ const PurchaseForm = ({ product }) => {
         } else {
             // const { data } = axios.post(`http://localhost:5000/orders`,  purchaseInfo )
             // console.log(data)
-            fetch('http://localhost:5000/orders', {
+            fetch('https://agile-dawn-56972.herokuapp.com/orders', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json',

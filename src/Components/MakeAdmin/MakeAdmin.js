@@ -9,7 +9,7 @@ const MakeAdmin = () => {
     const [users, setUsers] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:5000/users', {
+        fetch('https://agile-dawn-56972.herokuapp.com/users', {
             method: 'GET',
             headers: {
                 'authorization': `Bearer ${localStorage.getItem('accessToken')}`
@@ -20,7 +20,7 @@ const MakeAdmin = () => {
     }, [users])
 
     const handleMakeAdmin = async email => {
-        fetch(`http://localhost:5000/users/admin/${email}`, {
+        fetch(`https://agile-dawn-56972.herokuapp.com/users/admin/${email}`, {
             method: 'PUT',
             headers: {
                 'authorization': `Bearer ${localStorage.getItem('accessToken')}`

@@ -23,7 +23,7 @@ const Review = ({ product }) => {
     const onSubmit = data => {
         const { comments } = data
         const reviews = { productId: _id, name, userName, userEmail, comments,img }
-        fetch(`http://localhost:5000/reviews`, {
+        fetch(`https://agile-dawn-56972.herokuapp.com/reviews`, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

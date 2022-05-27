@@ -4,7 +4,7 @@ const ManageAllOrder = ({ order }) => {
     const { _id, productName, purchasePrice, userName, phone, addresspa, paid, status } = order
 
     const handlePlaced = () => {
-        fetch(`http://localhost:5000/allorders/${_id}`, {
+        fetch(`https://agile-dawn-56972.herokuapp.com/allorders/${_id}`, {
             method: "PUT",
             headers: {
                 'content-type': 'application/json',
