@@ -41,10 +41,10 @@ function App() {
           </RequireAuth>
         }>
           <Route index element={<MyOrder></MyOrder>}></Route>
+          <Route path='profile' element={<MyProfile></MyProfile>}></Route>
           <Route path='payment/:orderId' element={<Payment></Payment>}></Route>
           <Route path='reviews' element={<Reviews></Reviews>}></Route>
-          <Route path='profile' element={<MyProfile></MyProfile>}></Route>
-          <Route path='ManageAllProduct' element={<RequireAdmin><ManageAllOrders></ManageAllOrders></RequireAdmin>}></Route>
+          <Route path='ManageAllOrders' element={<RequireAdmin><ManageAllOrders></ManageAllOrders></RequireAdmin>}></Route>
           <Route path='addAProduct' element={<RequireAdmin><AddAProduct></AddAProduct></RequireAdmin>}></Route>
           <Route path='makeAdmin' element={<RequireAdmin><MakeAdmin></MakeAdmin></RequireAdmin>}></Route>
           <Route path='manageProduct' element={<RequireAdmin><ManageProduct></ManageProduct></RequireAdmin>}></Route>
