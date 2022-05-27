@@ -27,6 +27,7 @@ const Purchase = () => {
         return <Loading></Loading>
     }
 
+    console.log(product)
 
     return (
         <div className='grid lg:grid-cols-2 gap-5 justify-items-center my-20 lg:w-5/6 mx-auto'>

@@ -8,7 +8,7 @@ const Review = ({ product }) => {
 
     const [user, loading] = useAuthState(auth)
     const { register, handleSubmit, watch, formState: { errors }, reset } = useForm();
-    const { _id, name } = product
+    const { _id, name ,img} = product
     const userName = user?.displayName;
     const userEmail = user?.email;
 
@@ -22,7 +22,7 @@ const Review = ({ product }) => {
 
     const onSubmit = data => {
         const { comments } = data
-        const reviews = { productId: _id, name, userName, userEmail, comments }
+        const reviews = { productId: _id, name, userName, userEmail, comments,img }
         fetch(`http://localhost:5000/reviews`, {
             method: 'POST',
             headers: {

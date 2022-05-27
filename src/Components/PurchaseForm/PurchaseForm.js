@@ -7,10 +7,11 @@ import auth from '../../firebase.init';
 const PurchaseForm = ({ product }) => {
     const [user] = useAuthState(auth)
     const [quantityError, setQuantityError] = useState('')
-    const [quantity,setQuantity] = useState('')
-    const { _id, name, available_quantity, minimum_quantity, price,img } = product;
+    const [quantity, setQuantity] = useState('')
+    const { _id, name, available_quantity, minimum_quantity, price, img } = product;
+    console.log(price)
 
-    const handleChange = e =>{
+    const handleChange = e => {
         const value = e.target.value
         setQuantity(value)
     }
@@ -26,9 +27,9 @@ const PurchaseForm = ({ product }) => {
         const address = event.target.address.value;
         const phone = event.target.phone.value;
         const purchaseQuantity = parseInt(event.target.quantity.value);
-        const purchasePrice = price * purchaseQuantity
+        const purchasePrice = parseInt(price) * purchaseQuantity
         const purchaseInfo = {
-            productId:_id,
+            productId: _id,
             img,
             productName,
             userName,
@@ -42,22 +43,22 @@ const PurchaseForm = ({ product }) => {
             setQuantityError(<p className='text-red-600'>Sorry!you ordered more than In Stack</p>)
             return;
         } else if (purchaseQuantity < minimum_quantity) {
-            setQuantityError(<p className='text-red-600'>You  have to ordere more than In $`{minimum_quantity}`</p>)
+            setQuantityError(<p className='text-red-600'>You  have to ordered more than In $`{minimum_quantity}`</p>)
             return;
         } else {
             // const { data } = axios.post(`http://localhost:5000/orders`,  purchaseInfo )
             // console.log(data)
-            fetch('http://localhost:5000/orders',{
-                method:'POST',
-                headers:{
-                    'content-type':'application/json',
+            fetch('http://localhost:5000/orders', {
+                method: 'POST',
+                headers: {
+                    'content-type': 'application/json',
                 },
-                body:JSON.stringify(purchaseInfo)
+                body: JSON.stringify(purchaseInfo)
             })
-            .then(res=>res.json())
-            .then(data => {
-                toast.success('Order Completed')
-            })
+                .then(res => res.json())
+                .then(data => {
+                    toast.success('Order Completed')
+                })
         }
     }
 
@@ -91,13 +92,15 @@ const PurchaseForm = ({ product }) => {
 
                     <div className="w-full max-w-xs mt-[-5]">
                         <label className="label">
-                            <span className="label-text font-bold">You have to purchase minimun 2000 pices</span>
+                            <span className="label-text font-bold">You have to purchase minimun {minimum_quantity} pices</span>
+                        </label>
+                        <label className='label'>
                             {quantityError}
                         </label>
                         <input
                             type="text"
                             name='quantity'
-                            value={`${minimum_quantity}`}
+                            defaultValue={minimum_quantity}
                             onChange={handleChange}
                             className="input input-bordered w-full max-w-xs" />
                     </div>

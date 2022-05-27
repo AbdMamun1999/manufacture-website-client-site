@@ -22,7 +22,7 @@ const Tools = () => {
             </h1>
             <div className='grid lg:grid-cols-3 gap-10'>
                 {
-                    tools.map(tool => <Tool
+                    [...tools].reverse().slice(0,6).map(tool => <Tool
                         key={tool._id}
                         tool={tool}
                     ></Tool>)

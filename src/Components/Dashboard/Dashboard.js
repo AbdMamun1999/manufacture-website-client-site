@@ -16,13 +16,13 @@ const Dashboard = () => {
       <div className="drawer-side bg-slate-500">
         <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
         <ul className="menu p-4 overflow-y-auto w-80 bg-slate-500 text-base-content">
+          <li><Link to='/dashboard'>My Profile</Link></li>
           {
             !admin && <>
-              <li><Link to='/dashboard'>My Orders</Link></li>
+              <li><Link to='/dashboard/myorders'>My Orders</Link></li>
               <li><Link to='/dashboard/reviews'>Reviews</Link></li>
             </>
           }
-          <li><Link to='/dashboard/profile'>My Profile</Link></li>
           {
             admin && <>
               <li><Link to='/dashboard/ManageAllOrders'>Manage All Orders</Link></li>

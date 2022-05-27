@@ -9,8 +9,8 @@ const MakeAdmin = () => {
     const [users, setUsers] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:5000/users',{
-            method:'GET',
+        fetch('http://localhost:5000/users', {
+            method: 'GET',
             headers: {
                 'authorization': `Bearer ${localStorage.getItem('accessToken')}`
             }
@@ -19,24 +19,24 @@ const MakeAdmin = () => {
             .then(data => setUsers(data))
     }, [users])
 
-    const handleMakeAdmin =async email => {
-      fetch(`http://localhost:5000/users/admin/${email}`,{
-        method:'PUT',
-        headers: {
-            'authorization': `Bearer ${localStorage.getItem('accessToken')}`
-        }
-      })
-      .then(res=>{
-          if(res.status === 403){
-              toast.error('Failed to make an admin')
-          }
-        return  res.json()
+    const handleMakeAdmin = async email => {
+        fetch(`http://localhost:5000/users/admin/${email}`, {
+            method: 'PUT',
+            headers: {
+                'authorization': `Bearer ${localStorage.getItem('accessToken')}`
+            }
         })
-      .then(data=>{
-          if(data.acknowledged === true){
-              toast.success('Successfully make an admin')
-          }
-      })
+            .then(res => {
+                if (res.status === 403) {
+                    toast.error('Failed to make an admin')
+                }
+                return res.json()
+            })
+            .then(data => {
+                if (data.acknowledged === true) {
+                    toast.success('Successfully make an admin')
+                }
+            })
 
     }
 

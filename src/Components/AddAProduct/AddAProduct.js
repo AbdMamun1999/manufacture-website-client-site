@@ -22,11 +22,14 @@ const AddAProduct = () => {
             .then(result => {
                 if (result.success) {
                     const img = result.data.url
+                    const description = [data.description]
                     const product = {
                         img,
                         name: data.name,
-                        available_quantity: data.available_quantity, minimum_quantity: data.minimum_quantity,
-                        price: data.price
+                        available_quantity: data.available_quantity,
+                        minimum_quantity: data.minimum_quantity,
+                        price: data.price,
+                        description,
                     }
 
                     fetch('http://localhost:5000/product', {
@@ -39,13 +42,13 @@ const AddAProduct = () => {
                     })
                         .then(res => res.json())
                         .then(inserted => {
-                            if(inserted.insertedId){
+                            if (inserted.insertedId) {
                                 toast.success('Successfully add product')
                                 reset()
-                            }else{
+                            } else {
                                 toast.error('Failed to add product')
                             }
-                            
+
                         })
 
                 }
@@ -136,6 +139,22 @@ const AddAProduct = () => {
                             })} />
                         <label className="label">
                             {errors?.price?.type === 'required' && <span className="label-text-alt text-red-600">{errors?.price.message}</span>}
+                        </label>
+                    </div>
+                    <div className="form-control">
+                        <input
+                            type="text"
+                            placeholder="Description of product(you post more description point.you just follow (' ',' ') like an array)"
+                            className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-black-600 dark:border-gray-600 dark:focus:border-black-500 focus:outline-none focus:ring-0 focus:border-black-600 peer"
+                            {...register("description", {
+                                required: {
+                                    value: true,
+                                    message: 'Description is Require'
+                                }
+
+                            })} />
+                        <label className="label">
+                            {errors?.description?.type === 'required' && <span className="label-text-alt text-red-600">{errors?.description.message}</span>}
                         </label>
                     </div>
                     <div>

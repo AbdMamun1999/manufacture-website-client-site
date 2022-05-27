@@ -10,6 +10,7 @@ const HomePageReviews = () => {
             .then(data => setReviews(data))
     }, []) 
 
+    console.log(reviews)
 
     return (
 

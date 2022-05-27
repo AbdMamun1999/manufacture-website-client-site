@@ -21,7 +21,7 @@ const Order = ({ order, refetch }) => {
                 <p>If a dog chews shoes whose shoes does he choose?</p>
                 <p className='bold'><small>Price: ${purchasePrice}</small></p>
                 <div className="card-actions">
-                    {(purchasePrice && !order.paid) && <label onClick={openModal} htmlFor="my-modal-6" className="btn btn-primary modal-button">Cencel</label>}
+                    {(purchasePrice && !order.paid) && <label onClick={openModal} htmlFor="delete-order-modal" className="btn btn-primary modal-button">Cencel</label>}
 
                     {
                         (purchasePrice && !order.paid) && <Link to={`/dashboard/payment/${_id}`}>
