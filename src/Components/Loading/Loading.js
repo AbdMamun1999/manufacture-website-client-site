@@ -2,14 +2,10 @@ import React from 'react';
 
 const Loading = () => {
     return (
-        <div className='flex items-start justify-center h-[100vh'>
-            <button type="button" className="bg-indigo-500 ..." disabled>
-                <svg className="animate-spin h-5 w-5 mr-3 ..." viewBox="0 0 24 24">
-
-                </svg>
-                Processing...
-            </button>
-
+        <div>
+            <div class="h-[95vh] flex items-center justify-center ">
+                <div class="w-16 h-16 border-b-2 border-gray-900 rounded-full animate-spin"></div>
+            </div>
         </div>
     );
 };
