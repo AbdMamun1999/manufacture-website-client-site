@@ -58,7 +58,7 @@ const SignUp = () => {
     
     return (
         <div className="hero  min-h-screen bg-base-200">
-            <div className="hero-content w-4/6">
+            <div className="hero-content w-full lg:w-4/6">
                 <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100 ">
                     <div className="card-body ">
                         <h2 className='card-title'>Register To ........</h2>
