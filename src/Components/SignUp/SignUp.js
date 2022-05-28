@@ -61,7 +61,7 @@ const SignUp = () => {
             <div className="hero-content w-full lg:w-4/6">
                 <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100 ">
                     <div className="card-body ">
-                        <h2 className='card-title'>Register To ........</h2>
+                        <h2 className='card-title'>Register To Super Max Tools</h2>
                         <form onSubmit={handleSubmit(onSubmit)}>
                             <div className="form-control">
                                 {/*   <label className="label">
