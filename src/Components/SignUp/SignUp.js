@@ -16,7 +16,7 @@ const SignUp = () => {
         user,
         loading,
         error,
-    ] = useCreateUserWithEmailAndPassword(auth);
+    ] = useCreateUserWithEmailAndPassword(auth,{sendEmailVerification: true});
     const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
     const [updateProfile, updating, upError] = useUpdateProfile(auth);
     const navigate = useNavigate()
