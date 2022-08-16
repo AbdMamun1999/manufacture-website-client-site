@@ -20,7 +20,7 @@ const Tools = () => {
             <h1 className='text-4xl text-center font-bold my-10 '>
                 Our Tools
             </h1>
-            <div className='grid lg:grid-cols-3 gap-10'>
+            <div className='grid lg:grid-cols-3 justify-items-center gap-y-5 w-4/5 mx-auto'>
                 {
                     [...tools].reverse().slice(0,6).map(tool => <Tool
                         key={tool._id}

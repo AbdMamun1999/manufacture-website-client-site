@@ -1,12 +1,129 @@
 [
-    {"img":"https://i.ibb.co/d7pcQjH/61ae3-VS81i-L-AC-SX466-PIbundle-4-Top-Right-0-0-SH20-1.jpg","name":"CRAFTSMAN Tape Measure, Easy Grip, 30-Foot (CMHT37470S)" ,"available_quantity":50000,"price":20,"minimum_quantity":2000,"brand":"Craftsman","style":"Hammer 16 oz","weigth":"16 Ounces","material":"Steel, fiberglass","description":["Durability: overstrike protection where fiberglass handles are most prone to break","Improved grip during use: over mold grip","Driving and pulling nails"]},
-    {"img":"https://i.ibb.co/2Yy0SN9/images-1.jpg","name":"CRAFTSMAN VISE-GRIP Adjustable Crescent Wrench, 10-Inch (2078610)" ,"available_quantity":50000,"price":22,"minimum_quantity":2000,"brand":"Craftsman","style":"Hammer 16 oz","weigth":"16 Ounces","material":"Steel, fiberglass","description":["Durability: overstrike protection where fiberglass handles are most prone to break","Improved grip during use: over mold grip","Driving and pulling nails"]},
-    {"img":"https://i.ibb.co/z4zxpwN/Claw-Hammer.jpg","name":"CRAFTSMAN Hammer, Fiberglass, 16 oz. (CMHT51398)" ,"available_quantity":40000,"price":27,"minimum_quantity":2000,"brand":"Craftsman","style":"Hammer 16 oz","weigth":"16 Ounces","material":"Steel, fiberglass","description":["Durability: overstrike protection where fiberglass handles are most prone to break","Improved grip during use: over mold grip","Driving and pulling nails"]},
-    {"img":"https://i.ibb.co/0KR9ZNy/517-An-JRq2a-L-AC-SX466-1.jpg","name":"CRAFTSMAN Ratcheting Screwdriver, Multibit Set, 26-Piece (CMHT68001)" ,"available_quantity":50000,"price":26,"minimum_quantity":2000,"brand":"Craftsman","style":"Hammer 16 oz","weigth":"16 Ounces","material":"Steel, fiberglass","description":["Durability: overstrike protection where fiberglass handles are most prone to break","Improved grip during use: over mold grip","Driving and pulling nails"]},
-    {"img":"https://i.ibb.co/KNDKL2f/71-Sdt-Tq-P7s-S-AC-SX466-1.jpg","name":"CRAFTSMAN CMHT81712 CFT SLIP JOINT PLIER-6IN , Red " ,"available_quantity":100000,"price":11,"minimum_quantity":2000,"brand":"Craftsman","style":"Hammer 16 oz","weigth":"16 Ounces","material":"Steel, fiberglass","description":["Durability: overstrike protection where fiberglass handles are most prone to break","Improved grip during use: over mold grip","Driving and pulling nails"]},
-    {"img":"https://i.ibb.co/LvBsjmP/index-1.jpg","name":"CRAFTSMAN Lathe Chisel, 1/2-Inch Ring Tool  " ,"available_quantity":60000,"price":28,"minimum_quantity":2000,"brand":"Craftsman","style":"Hammer 16 oz","weigth":"16 Ounces","material":"Steel, fiberglass","description":["Durability: overstrike protection where fiberglass handles are most prone to break","Improved grip during use: over mold grip","Driving and pulling nails"]}
+    {
+        "img": "https://i.ibb.co/d7pcQjH/61ae3-VS81i-L-AC-SX466-PIbundle-4-Top-Right-0-0-SH20-1.jpg",
+        "name": "CRAFTSMAN Tape Measure, Easy Grip, 30-Foot (CMHT37470S)",
+        "available_quantity": 50000,
+        "price": 20,
+        "minimum_quantity": 2000,
+        "details": {
+            "brand": "Craftsman",
+            "style": "Hammer 16 oz",
+            "weigth": "16 Ounces",
+            "material": "Steel, fiberglass"
+        },
+        "about": [
+            "Durability: overstrike protection where fiberglass handles are most prone to break",
+            "Improved grip during use: over mold grip",
+            "Driving and pulling nails"
+        ]
+    },
+    {
+        "img": "https://i.ibb.co/2Yy0SN9/images-1.jpg",
+        "name": "CRAFTSMAN VISE-GRIP Adjustable Crescent Wrench, 10-Inch (2078610)",
+        "available_quantity": 50000,
+        "price": 22,
+        "minimum_quantity": 2000,
+        "details": {
+            "brand": "Craftsman",
+            "style": "Hammer 16 oz",
+            "weigth": "16 Ounces",
+            "material": "Steel, fiberglass"
+        },
+        "about": [
+            "Durability: overstrike protection where fiberglass handles are most prone to break",
+            "Improved grip during use: over mold grip",
+            "Driving and pulling nails"
+        ]
+    },
+    {
+        "img": "https://i.ibb.co/z4zxpwN/Claw-Hammer.jpg",
+        "name": "CRAFTSMAN Hammer, Fiberglass, 16 oz. (CMHT51398)",
+        "available_quantity": 40000,
+        "price": 27,
+        "minimum_quantity": 2000,
+        "details": {
+            "brand": "Craftsman",
+            "style": "Hammer 16 oz",
+            "weigth": "16 Ounces",
+            "material": "Steel, fiberglass"
+        },
+        "about": [
+            "Durability: overstrike protection where fiberglass handles are most prone to break",
+            "Improved grip during use: over mold grip",
+            "Driving and pulling nails"
+        ]
+    },
+    {
+        "img": "https://i.ibb.co/0KR9ZNy/517-An-JRq2a-L-AC-SX466-1.jpg",
+        "name": "CRAFTSMAN Ratcheting Screwdriver, Multibit Set, 26-Piece (CMHT68001)",
+        "available_quantity": 50000,
+        "price": 26,
+        "minimum_quantity": 2000,
+        "details": {
+            "brand": "Craftsman",
+            "style": "Hammer 16 oz",
+            "weigth": "16 Ounces",
+            "material": "Steel, fiberglass"
+        },
+        "about": [
+            "Durability: overstrike protection where fiberglass handles are most prone to break",
+            "Improved grip during use: over mold grip",
+            "Driving and pulling nails"
+        ]
+    },
+    {
+        "img": "https://i.ibb.co/KNDKL2f/71-Sdt-Tq-P7s-S-AC-SX466-1.jpg",
+        "name": "CRAFTSMAN CMHT81712 CFT SLIP JOINT PLIER-6IN , Red ",
+        "available_quantity": 100000,
+        "price": 11,
+        "minimum_quantity": 2000,
+        "details": {
+            "brand": "Craftsman",
+            "style": "Hammer 16 oz",
+            "weigth": "16 Ounces",
+            "material": "Steel, fiberglass"
+        },
+        "about": [
+            "Durability: overstrike protection where fiberglass handles are most prone to break",
+            "Improved grip during use: over mold grip",
+            "Driving and pulling nails"
+        ]
+    },
+    {
+        "img": "https://i.ibb.co/LvBsjmP/index-1.jpg",
+        "name": "CRAFTSMAN Lathe Chisel, 1/2-Inch Ring Tool  ",
+        "available_quantity": 60000,
+        "price": 28,
+        "minimum_quantity": 2000,
+        "details": {
+            "brand": "Craftsman",
+            "style": "Hammer 16 oz",
+            "weigth": "16 Ounces",
+            "material": "Steel, fiberglass"
+        },
+        "about": [
+            "Durability: overstrike protection where fiberglass handles are most prone to break",
+            "Improved grip during use: over mold grip",
+            "Driving and pulling nails"
+        ]
+    },
+    {
+        "name": "Morpheus 360 Eclipse 360 ANC Wireless Over Ear Headphones, Bluetooth Headset with Microphone, Protein Leather Ear Cups, USB Type C Fast Charging, 40 Hour Playtime HP9250B",
+        "img": "https://i.ibb.co/MNkzSSf/61-EOWg72m-L-AC-SY450.jpg",
+        "price": 69,
+        "details": {
+            "brands": "Morpheus 360",
+            "ear_placement": "Over Ear",
+            "color": "Black",
+            "connectivity_technology": "Wireless",
+            "model_name": "Eclipse 360 ANC Wireless Headphones"
+        },
+        "about": [
+            "Digital Active Noise Cancelling detects and virtually eliminates background noise such as automobile traffic and airplane engines by up to 35dB to allow you to focus on what’s important. Turn the ANC Button off when you need to hear what is happing around you, while still listening to music, watching movies or while engaged on Zoom or Team conference calls",
+            "Kalimba Digital Signal Processing",
+            "Bluetooth 5.0 we designed our Wireless Headphones on the Bluetooth 5.0 platform, allowing our Eclipse 360 Active Noise Cancelling Headphones to communicate as Bluetooth low energy devices, providing a stronger signal for better stability and improved battery life."
+        ],
+        "ratings": 5,
+        "main_key": "headphone"
+    }
 ]
-
-
-
-

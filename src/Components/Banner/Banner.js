@@ -12,7 +12,7 @@ import imgSeven from '../../images/slider/offer_that_can_change_your_living_big_
 
 const Banner = () => {
     return (
-        <div className='w-full lg:w-[80%] border-2 mx-auto'>
+        <div className='w-full mx-auto shadow-xl border-black'>
             <Carousel autoPlay showThumbs={false} infiniteLoop>
                 <div>
                     <img src={imgOne} />

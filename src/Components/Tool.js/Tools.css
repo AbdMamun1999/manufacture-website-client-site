@@ -1,0 +1,31 @@
+.parent-details-button {
+    position: relative;
+}
+
+.details-div {
+    width: 100%;
+    height: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    visibility: hidden;
+    /* background: #000; */
+    /* opacity: 0.5; */
+    transition: all .5s ease-in-out;
+}
+
+.details-button {
+    box-shadow: 0px 0px 2px 3px #222f3e;
+    transition: all .5s;
+    visibility: hidden;
+
+}
+
+.parent-details-button:hover .details-div {
+    height: 100%;
+    visibility: visible;
+}
+
+.details-div:hover .details-button{
+    visibility: visible;
+}
