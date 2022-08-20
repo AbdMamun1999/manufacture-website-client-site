@@ -2,36 +2,38 @@ import React from 'react';
 import ReactImageMagnify from 'react-image-magnify';
 
 const ProductDetails = ({ product }) => {
-    const { img, about,details } = product
+    const { img, about, details } = product
 
     return (
         <div className='col-span-3'>
             <div className="bg-base-100  lg:grid  lg:grid-cols-5">
                 <div className='col-span-2'>
-                    <ReactImageMagnify {...{
-                        smallImage: {
-                            alt: 'Wristwatch by Ted Baker London',
-                            isFluidWidth: true,
-                            src: img,
-                            sizes: '(max-width: 480px) 100vw, (max-width: 1200px) 30vw, 360px'
-                        },
-                        largeImage: {
-                            src: img,
-                            width: 1200,
-                            height: 1800
-                        },
-                        lensStyle: {
-                            background: 'hsla(0, 0%, 100%, .3)',
-                            border: '1px solid #ccc'
-                        },
-                        enlargedImageContainerDimensions: {
-                            width: '200%',
-                            height: '100%'
-                        },
-                        isHintEnabled: true,
-                        shouldHideHintAfterFirstActivation: false,
-                        shouldUsePositiveSpaceLens: true
-                    }} />
+                    <div >
+                        <ReactImageMagnify {...{
+                            smallImage: {
+                                alt: 'Wristwatch by Ted Baker London',
+                                isFluidWidth: true,
+                                src: img,
+                                sizes: '(max-width: 480px) 100vw, (max-width: 1200px) 30vw, 360px'
+                            },
+                            largeImage: {
+                                src: img,
+                                width: 1200,
+                                height: 1800
+                            },
+                            lensStyle: {
+                                background: 'hsla(0, 0%, 100%, .3)',
+                                border: '1px solid #ccc'
+                            },
+                            enlargedImageContainerDimensions: {
+                                width: '200%',
+                                height: '100%'
+                            },
+                            isHintEnabled: true,
+                            shouldHideHintAfterFirstActivation: false,
+                            shouldUsePositiveSpaceLens: true
+                        }} />
+                    </div>
                 </div>
                 <div className="card-body col-span-3">
                     <h1 className="text-2xl font-bold">{product.name}</h1>

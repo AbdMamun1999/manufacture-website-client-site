@@ -10,7 +10,6 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Dashboard from './Components/Dashboard/Dashboard';
 import MyOrder from './Components/MyOrder/MyOrder';
-import Reviews from './Components/Reviews/Reviews';
 import MyProfile from './Components/MyProfile/MyProfile';
 import Payment from './Components/Payment/Payment';
 import ManageAllOrders from './Components/ManageAllOrders/ManageAllOrders';
@@ -23,6 +22,7 @@ import Portfolio from './Components/Portfolio/Portfolio';
 import PageNotFound from './Components/PageNotFound/PageNotFound';
 import Blogs from './Components/Blogs/Blogs';
 import Review from './Components/Review/Review';
+import ContactUs from './Components/ContactUs/ContactUs';
 
 function App() {
   return (
@@ -31,6 +31,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
+        <Route path='/contactUs' element={<ContactUs></ContactUs>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/signup' element={<SignUp></SignUp>}></Route>
         <Route path='/portfolio' element={<Portfolio></Portfolio>}></Route>

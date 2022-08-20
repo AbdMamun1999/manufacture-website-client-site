@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { FaFacebookSquare, FaTwitterSquare, FaInstagramSquare, FaLinkedin } from 'react-icons/fa';
 
 const Footer = () => {
   return (
@@ -26,16 +27,30 @@ const Footer = () => {
           <Link to='/' className="link link-hover">Cookie policy</Link>
         </div>
         <div>
-          <span className="footer-title">Newsletter</span>
-          <div className="form-control w-80">
-            <label className="label">
-              <span className="label-text">Enter your email address</span>
-            </label>
-            <div className="relative">
-              <input type="text" placeholder="username@site.com" className="input input-bordered w-full pr-16" />
-              <button className="btn btn-primary absolute top-0 right-0 rounded-l-none">Subscribe</button>
+          <di>
+            <div className='mb-5'>
+              <h2 className='text-3xl mt-5 lg:mt-0'>Location</h2>
+              <p className='mt-3 font-bold'>151/7(3 and 4 floor), green road <br /> panthapath,Dhaka</p>
             </div>
-          </div>
+            <div>
+              <span class="footer-title block">Follow Us</span>
+              <div class="grid grid-flow-col gap-4">
+
+                <a href='#'>
+                  <FaFacebookSquare style={{ fontSize: '30px' }}></FaFacebookSquare >
+                </a>
+                <a href='#'>
+                  <FaTwitterSquare style={{ fontSize: '30px' }}></FaTwitterSquare >
+                </a>
+                <a href='#'>
+                  <FaInstagramSquare style={{ fontSize: '30px' }}></FaInstagramSquare >
+                </a>
+                <a href='#'>
+                  <FaLinkedin style={{ fontSize: '30px' }}></FaLinkedin >
+                </a>
+              </div>
+            </div>
+          </di>
         </div>
       </footer>
       <footer class="footer footer-center p-4 bg-base-300 text-base-content">
