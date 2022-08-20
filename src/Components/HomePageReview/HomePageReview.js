@@ -1,26 +1,32 @@
 import React from 'react';
 
 const HomePageReview = ({review}) => {
-    const {name,userName,comments,img} = review;
+    const {name,reviewNumber,comments,userImg,date} = review;
+
+    const createReviewArray = () =>{
+
+    }
+
     return (
-        <div>
-             <figure className="bg-gray-100 rounded-xl p-8">
-            <h1 className='uppercase font-bold mb-2'>{name}</h1>
-            {/* <img  src="/sarah-dayan.jpg" alt="" > */}
-            <img src={img} alt="" className="w-32 h-32 rounded-full mx-auto"  width="384" height="512"/>
-            <div className="pt-6 space-y-4">
-                <blockquote>
-                    <p className="text-lg">
-                       {comments}
-                    </p>
-                </blockquote>
-                <figcaption>
-                    <div>
-                       {userName}
-                    </div>
-                </figcaption>
+        <div className='border-2 p-3'>
+            <div className='my-2'>
+                <div className='rating'>
+                    {[...Array(5).keys()].map(key=><input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />)}
+                </div>
+                <p>{date}</p>
+                <hr/>
             </div>
-        </figure>
+            <div className='mb-2'>
+                <p>
+                    {comments.slice(0,342)}
+                </p>
+            </div>
+            <div className='flex flex-row items-center gap-2'>
+                <div className='w-[56px] h-[56px] border-2 rounded-full text-white text-center '>
+                    <img src={userImg} alt="" className='object-contain rounded-full'/>
+                </div>
+                <h2>{name}</h2>
+            </div>
         </div>
     );
 };

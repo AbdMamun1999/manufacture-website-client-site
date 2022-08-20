@@ -12,7 +12,6 @@ const DeleteManageProductModal = ({ setDeleteProduct, id }) => {
             }
         }).then(res => res.json())
             .then(data => {
-                console.log(data)
                 setDeleteProduct(false)
             })
 

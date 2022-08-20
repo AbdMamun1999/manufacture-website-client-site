@@ -8,7 +8,6 @@ import Loading from '../Loading/Loading';
 const Navbar = () => {
     const [user, loading] = useAuthState(auth)
     const navigate = useNavigate()
-    console.log(user)
 
 
     const handleLogOut = () => {

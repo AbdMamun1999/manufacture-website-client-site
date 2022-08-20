@@ -30,7 +30,6 @@ const MyProfile = () => {
         })
             .then(res => res.json())
             .then(data => {
-                console.log(data)
                 if (data.result.acknowledged === true) {
                     toast.success("Profile Completed")
                 }

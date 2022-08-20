@@ -22,7 +22,6 @@ const Payment = () => {
             .then(data => setOrder(data))
     }, [orderId])
 
-    console.log(order, 'payment page order')
 
     return (
         <div>

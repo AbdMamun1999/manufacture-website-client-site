@@ -12,7 +12,6 @@ const CheckoutForm = ({ order }) => {
 
 
     const { _id, purchasePrice, userName, email } = order
-    console.log(purchasePrice, 'checkout page purchasePrice')
 
     useEffect(() => {
         // Create PaymentIntent as soon as the page loads

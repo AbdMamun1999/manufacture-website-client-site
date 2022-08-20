@@ -9,7 +9,6 @@ const AddAProduct = () => {
     const imageStorage_Key = 'dd8247b94d9772d98db3e5f9b068a8d7'
 
     const onSubmit = data => {
-        console.log(data)
         const image = data.image[0]
         const formData = new FormData();
         formData.append('image', image)

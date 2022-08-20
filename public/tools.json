@@ -125,5 +125,140 @@
         ],
         "ratings": 5,
         "main_key": "headphone"
+    },
+    {
+        "id": 1,
+        "name": "Morpheus 360 Eclipse 360 ANC Wireless Over Ear Headphones, Bluetooth Headset with Microphone, Protein Leather Ear Cups, USB Type C Fast Charging, 40 Hour Playtime HP9250B",
+        "img": "https://i.ibb.co/MNkzSSf/61-EOWg72m-L-AC-SY450.jpg",
+        "price": 69,
+        "details": {
+            "brands": "Morpheus 360",
+            "ear_placement": "Over Ear",
+            "color": "Black",
+            "connectivity_technology": "Wireless",
+            "model_name": "Eclipse 360 ANC Wireless Headphones"
+        },
+        "about": [
+            "Digital Active Noise Cancelling detects and virtually eliminates background noise such as automobile traffic and airplane engines by up to 35dB to allow you to focus on what’s important. Turn the ANC Button off when you need to hear what is happing around you, while still listening to music, watching movies or while engaged on Zoom or Team conference calls",
+            "Kalimba Digital Signal Processing",
+            "Bluetooth 5.0 we designed our Wireless Headphones on the Bluetooth 5.0 platform, allowing our Eclipse 360 Active Noise Cancelling Headphones to communicate as Bluetooth low energy devices, providing a stronger signal for better stability and improved battery life."
+        ],
+        "ratings": 5,
+        "main_key": "headphone"
+    },
+    {
+        "id": 2,
+        "name": "Apple AirPods (2nd Generation) Wireless Earbuds with Lightning Charging Case Included. Over 24 Hours of Battery Life, Effortless Setup. Bluetooth Headphones for iPhone",
+        "img": "https://i.ibb.co/vPDfjDD/7120-Gg-UKj3-L-AC-SX466.jpg",
+        "price": 58,
+        "details": {
+            "brands": "Apple",
+            "ear_placement": "In Ear",
+            "color": "White",
+            "connectivity_technology": "Bluetooth, NFC",
+            "model_name": "AirPods"
+        },
+        "about": [
+            "Quick access to Siri by saying “ Hey Siri ”",
+            "More than 24 hours total listening time with the Charging Case",
+            "Effortless setup, in-ear detection, and automatic switching for a magical experience",
+            "Easily share audio between two sets of AirPods on your iPhone, iPad, iPod touch, or Apple TV"
+        ],
+        "ratings": 5,
+        "main_key": "headphone"
+    },
+    {
+        "id": 3,
+        "name": "TOZO T6 True Wireless Earbuds Bluetooth Headphones Touch Control with Wireless Charging Case IPX8 Waterproof Stereo Earphones in-Ear Built-in Mic Headset Premium Deep Bass for Sport Black",
+        "img": "https://i.ibb.co/F8Pskss/71-Z09-Lgd-OPL-AC-SY450.jpg",
+        "price": 48,
+        "details": {
+            "brands": "TOZO",
+            "ear_placement": "In Ear",
+            "color": "Black",
+            "connectivity_technology": "Wireless",
+            "model_name": "T6"
+        },
+        "about": [
+            "[Smart Touch Control] Specific touch control function makes it more convenient, tap once to play/pause music and answer calls, double tap to skip forward/backward, hold to adjust the volume. You can easily control it without operating the phone.",
+            "[BLUETOOTH 5.3] Adopt the advanced Bluetooth 5.3 technology. TOZO T6 Support HSP, HFP, A2DP, AVRCP, which greatly improve the transmission speed and providing you with a low-latency listening experience.",
+            "[One step pairing] Pick up 2 headsets from charging case and they will connect each other automatically, then only one step easily enter mobile phone Bluetooth setting to pair the earbuds.",
+            "[IPX8 waterproof] Earbuds and charging case inner Nano-coating makes it possible to waterproof for 1 meters deep for 30 minutes. It is suitable for sports to prevent water. Ideal for sweating it out at the gym . Earbuds and case even can be washed by water and soap.",
+            "[Charge on the go] Playtime lasts for over 6 hours from single charge and total 30 hours with charging case. Enjoy fast charging, to fully charge the rechargerable case only 55 minutes via cable or less than 2 hours via wireless charger. Providing convenient charging way with no strings attached."
+        ],
+        "ratings": 5,
+        "main_key": "headphone"
+    },
+    {
+        "id": 4,
+        "name": "TOZO A1 Mini Wireless Earbuds Bluetooth 5.3 in Ear Light-Weight Headphones Built-in Microphone, IPX5 Waterproof, Immersive Premium Sound Long Distance Connection Headset with Charging Case, Black",
+        "img": "https://i.ibb.co/48cXdfZ/71-Pottnpl-PL-AC-SY450.jpg",
+        "price": 48,
+        "details": {
+            "brands": "TOZO",
+            "ear_placement": "In Ear",
+            "color": "Black",
+            "connectivity_technology": "Bluetooth",
+            "model_name": "A1 Mini"
+        },
+        "about": [
+            "[Ultra lightweight and compatible for small ear] The surface and Angle of A1 earbuds in-ear part have been polished and refined repeatedly to achieve a balance between beauty and comfort and make it comfortable to wear. Likewise, a single earbud weighs only 3.7g, making it as light as a feather and discreet in the ear. Ergonomic design provides a comfortable and secure fit that doesn’t protrude from your ears especially for Sports, Workout, Gym.",
+            "[Stereo sound quality] TOZO A1 earbuds’6mm diameter speaker presents a powerful and wide sound range, which makes the treble full of dynamics, and the bass powerful.Adopt advanced Bluetooth chip makes the sound played by the earphones much more beautiful and pleasant, suitable for sports or home work",
+            "[Smart touch control] A1 earbuds supports dual ear touch control, providing convenient operation on volume control, previous/next song, pause and answer calls along as well as voice assistant control.",
+            "[Bluetooth 5.3 &Long distance connection] ] With Bluetooth 5.3 technology A1 has superior sound quality and strong signal, so that there is no disconnection in listening music or making phone calls within 12 meters.",
+            "[Long battery life] With headphone 40mAh capacity and charging bin 400mAh capacity,The earbuds lasts 6 hours for normal use (60% volume), and the charging bin lasts 24 hours for 3 charges,which gives you excellent experience of long endurance."
+        ],
+        "ratings": 5,
+        "main_key": "headphone"
+    },
+    {
+        "id": 5,
+        "name": "Sony WH-1000XM4 Wireless Premium Noise Canceling Overhead Headphones with Mic for Phone-Call and Alexa Voice Control, Black",
+        "img": "https://i.ibb.co/z4jktSd/71o8-Q5-XJS5-L-AC-SX466.jpg",
+        "price": 48,
+        "details": {
+            "brands": "Sony",
+            "ear_placement": "Over Ear",
+            "color": "Black",
+            "connectivity_technology": "Bluetooth",
+            "model_name": "WH1000XM4/B"
+        },
+        "about": [
+            "Industry-leading noise canceling with Dual Noise Sensor technology",
+            "Next-level music with Edge-AI, co-developed with Sony Music Studios Tokyo",
+            "Up to 30-hour battery life with quick charging (10 min charge for 5 hours of playback)",
+            "Touch Sensor controls to pause play skip tracks, control volume, activate your voice assistant, and answer phone calls",
+            "Speak-to-chat technology automatically reduces volume during conversations",
+            "Superior call quality with precise voice pickup",
+            "Wearing detection pauses playback when headphones are removed",
+            "Seamless multiple-device pairing",
+            "Adaptive Sound Control provides a personalized listening experience",
+            "Updated design relieves pressure for long-lasting comfort."
+        ],
+        "ratings": 5,
+        "main_key": "headphone"
+    },
+    {
+        "id": 6,
+        "name": "Raycon The Gaming Bluetooth True Wireless Earbuds with Built in Mic, Low Latency, 31 Hours of Battery, Charging Case with Talk, Text, and Play, Bluetooth 5.0 (Jet Silver)",
+        "img": "https://i.ibb.co/Gcwgnbw/419eq9b-CSc-L-AC-SY450.jpg",
+        "price": 48,
+        "details": {
+            "brands": "Raycon",
+            "ear_placement": "In Ear",
+            "color": "Jet Silver",
+            "connectivity_technology": "Wireless",
+            "model_name": "The Gaming Earbuds"
+        },
+        "about": [
+            " HYPERSYNC LOW LATENCY MODE: using the latest chipset and TWS true wireless technology, The Gaming Earbuds offer 55ms ultra-low latency to ensure that there’s no delay between what you see and what you hear while you game giving you an advantage",
+            " OPTIMIZED MICROPHONE FOR GAMING: Your squad is your lifeline. We make sure they can hear you loud and clear even in the most intense situations with an optimized beamforming mic designed specifically for gaming",
+            "DAY & NIGHT: Fully charged, your earbuds will last you day in and day out, with 31 hours of battery total in the charging capsule, you get 7 hours of total playtime from a single charge. Add in an extended 24 hours of battery life from your handy-dandy, portable, wireless charging capsule, you really don't have to worry about your gaming stopping as you climb the leaderboard",
+            "YOUR SOUND, YOUR WAY: Three sound profiles (Pure - Balanced - Bass) let you personalize your audio for any type of content to give you a fully immersive experience no matter what you’re listening to",
+            "TAILORED FIT: No more worrying that your earbuds will fall out! With Five Gel Tip sizes you don't have to worry at all. These comfortable gaming earbuds will stay in your ears and with you through the hardest levels - climb toward that #1 spot with your Raycons!",
+            "The Raycon Limited Warranty only covers manufacturer’s defects for up to the first year the device's purchase date. These include: Volume imbalance, Pairing issues, Charging issues Broken piece (not caused by normal wear), Single-play issues.The warranty excludes defects or damage to the product resulting from; normal wear and tear, neglect, misuse, accident, improper application, or any other customer-induced damage; unauthorized repair or modification by customer or third party; shipping damage occurring while the product is in transit; or any other conditions whatsoever that are beyond the control of the company."
+        ],
+        "ratings": 5,
+        "main_key": "headphone"
     }
 ]

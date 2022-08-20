@@ -3,20 +3,20 @@ import './Tools.css'
 import { useNavigate } from 'react-router-dom';
 
 const Tool = ({ tool }) => {
-    const { img, name, price } = tool;
+    const { _id,img, name, price } = tool;
     const navigate = useNavigate()
 
     const handleNavigate = id => {
         navigate(`/purchase/${id}`)
     }
-    console.log(tool)
+    
     return (
         <div className="border-2 rounded border-primary ">
             <figure className='w-full flex justify-center parent-details-button'>
                 <img src={img} alt="Shoes" className="rounded-xl w-80 h-64 object-contain my-3" />
                 <div className='details-div flex justify-center items-center'>
                     <button
-                    onClick={handleNavigate} 
+                    onClick={()=>handleNavigate(_id)} 
                     className='bg-primary py-3 px-5 text-white rounded details-button uppercase font-bold' 
                     type="">details</button>
                 </div>

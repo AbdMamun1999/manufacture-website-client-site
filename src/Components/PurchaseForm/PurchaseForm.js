@@ -16,7 +16,6 @@ const PurchaseForm = ({ product }) => {
         setQuantity(value)
     }
 
-    console.log(quantity)
 
 
     const handleSubmit = event => {
@@ -65,9 +64,9 @@ const PurchaseForm = ({ product }) => {
 
 
     return (
-        <div className="card  bg-base-100 shadow-xl">
-            <div className="card-body ">
-                <h2 className="card-title">Order Now</h2>
+        <div className="bg-base-100 shadow-xl w-full lg:col-span-1 border-2 h-[500px]">
+            <div className="">
+                <h2 className="text-center font-bold text-2xl my-4">Order Now</h2>
                 <form
                     onSubmit={handleSubmit}
                     className='grid grid-cols-1 justify-items-center gap-4'>

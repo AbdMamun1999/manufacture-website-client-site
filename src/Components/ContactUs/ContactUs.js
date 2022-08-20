@@ -6,7 +6,6 @@ import { FaFacebookSquare, FaTwitterSquare, FaInstagramSquare, FaLinkedin } from
 const ContactUs = () => {
     const { register, handleSubmit, watch, formState: { errors }, reset } = useForm();
     const onSubmit = data => {
-        console.log(data)
     }
     return (
         <div className='grid grid-cols-1 lg:grid-cols-2 justify-items-center w-4/6 mx-auto my-10 '>
