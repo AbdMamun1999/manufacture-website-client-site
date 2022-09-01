@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import Tool from '../Tool.js/Tool';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+AOS.init();
 
 
 const Tools = () => {
@@ -16,7 +19,8 @@ const Tools = () => {
     },[])
 
     return (
-        <div>
+        <div data-aos="fade-up"
+        data-aos-duration="3000">
             <h1 className='text-4xl text-center font-bold my-10 '>
                 Our Tools
             </h1>

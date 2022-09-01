@@ -1,4 +1,8 @@
 import React from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+// ..
+AOS.init();
 
 const HomePageReview = ({review}) => {
     const {name,reviewNumber,comments,userImg,date} = review;
@@ -8,7 +12,8 @@ const HomePageReview = ({review}) => {
     }
 
     return (
-        <div className='border-2 p-3'>
+        <div className='border-2 p-3' data-aos="fade-up"
+        data-aos-duration="3000">
             <div className='my-2'>
                 <div className='rating'>
                     {[...Array(5).keys()].map(key=><input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />)}

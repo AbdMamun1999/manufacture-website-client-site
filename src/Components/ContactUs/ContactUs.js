@@ -1,6 +1,10 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import { FaFacebookSquare, FaTwitterSquare, FaInstagramSquare, FaLinkedin } from 'react-icons/fa';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+// ..
+AOS.init();
 
 
 const ContactUs = () => {
@@ -8,7 +12,8 @@ const ContactUs = () => {
     const onSubmit = data => {
     }
     return (
-        <div className='w-2/5 mx-auto my-10 '>
+        <div className='w-2/5 mx-auto my-10 ' data-aos="fade-up"
+        data-aos-duration="3000">
             <div className=''>
                 <div>
                 <h2 className='text-3xl mb-5 mt-5 lg:mt-0 text-center uppercase font-bold'>Contact Us </h2>

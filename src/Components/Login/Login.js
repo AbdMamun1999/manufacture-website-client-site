@@ -5,6 +5,9 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 import useToken from '../../hooks/useToken';
 import Loading from '../Loading/Loading';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+AOS.init();
 
 
 const Login = () => {
@@ -45,10 +48,12 @@ const Login = () => {
     if (token) {
         navigate(from, { replace: true });
     }
+    console.log(token,'token')
 
     return (
         <div className="hero min-h-screen bg-base-200">
-            <div className="hero-content flex-col lg:flex-row">
+            <div className="hero-content flex-col lg:flex-row" data-aos="fade-down"
+        data-aos-duration="3000">
                 <div className="text-center lg:text-left">
                     <h1 className="text-5xl font-bold">Login now!</h1>
                     <h1 className="py-6 text-5xl font-bold">Welcome to Super Max Tools</h1>
@@ -59,7 +64,8 @@ const Login = () => {
                         </p>
                     </div>
                 </div>
-                <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+                <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100" data-aos="fade-down"
+        data-aos-duration="3000">
                     <div className="card-body">
                         <h2 className='card-title'>Login To Your Account</h2>
                         <form onSubmit={handleSubmit(onSubmit)}>

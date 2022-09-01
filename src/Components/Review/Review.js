@@ -53,7 +53,7 @@ const Review = ({ product }) => {
     }
 
     return (
-        <div>
+        <div >
             <h1 className='text-center uppercase font-bold text-xl my-3'>Tell us about our product</h1>
             <div className="w-96 mx-auto mt-5 border-2 p-5 rounded">
                 <form onSubmit={handleSubmit(onSubmit)} className='flex flex-col gap-3'>

@@ -16,7 +16,7 @@ const ManageProducts = () => {
 
     return (
         <div>
-            {
+            { 
                 products?.map(product => <ManageProduct
                     key={product._id}
                     product={product}

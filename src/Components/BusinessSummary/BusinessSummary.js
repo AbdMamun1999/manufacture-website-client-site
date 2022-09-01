@@ -1,8 +1,13 @@
 import React from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+// ..
+AOS.init();
 
 const BusinessSummary = () => {
     return (
-        <div className='w-9/12 mx-auto'>
+        <div className='w-9/12 mx-auto' data-aos="fade-up"
+        data-aos-duration="3000">
             <div className='my-10'>
                 <h1 className='uppercase text-center text-5xl font-bold mt-10'>MILLION BUSINESS TRUST US</h1>
                 <h3 className='uppercase text-center text-2xl '>TRY to understand users expectation</h3>
