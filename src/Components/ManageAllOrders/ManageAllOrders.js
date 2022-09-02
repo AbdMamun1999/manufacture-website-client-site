@@ -1,25 +1,39 @@
-import React, { useEffect, useState } from 'react';
-import ManageAllOrder from '../ManageAllOrder/ManageAllOrder';
+import React, { useEffect, useState } from "react";
+import ManageAllOrder from "../ManageAllOrder/ManageAllOrder";
 
 const ManageAllOrders = () => {
-    const [allOrders,setAllOrders] = useState([])
+  const [allOrders, setAllOrders] = useState([]);
 
-    useEffect(()=>{
-        fetch('https://agile-dawn-56972.herokuapp.com/allorders')
-        .then(res=>res.json())
-        .then(data=>setAllOrders(data))
-    },[allOrders])
+  useEffect(() => {
+    fetch("https://agile-dawn-56972.herokuapp.com/allorders")
+      .then((res) => res.json())
+      .then((data) => setAllOrders(data));
+  }, [allOrders]);
 
-    return (
-        <div className='grid grid-cols-1 lg:grid-cols-3 gap-3 justify-items-center'>
-            {
-                allOrders.map(order=><ManageAllOrder
-                key={order._id}
-                order={order}
-                ></ManageAllOrder>)
-            }
-        </div>
-    );
+  return (
+    <div className="overflow-x-auto">
+      <table className="table w-full">
+        <thead>
+          <tr>
+            <th>Thumbnail</th>
+            <th>Name</th>
+            <th>Customer Name</th>
+            <th>Customer Phone</th>
+            <th>Address</th>
+            <th>status</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          {allOrders.map((order) => (
+            <tr>
+              <ManageAllOrder key={order._id} order={order}></ManageAllOrder>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
 };
 
 export default ManageAllOrders;
