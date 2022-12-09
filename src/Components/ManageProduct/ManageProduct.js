@@ -21,7 +21,11 @@ const ManageProduct = ({ product }) => {
           height="100"
         />
       </td>
-      <td className="text-xl" ><p className="uppercase" title={name}>{name.slice(0, 50)}</p></td>
+      <td className="text-xl">
+        <p className="uppercase" title={name}>
+          {name.slice(0, 50)}
+        </p>
+      </td>
       <th>
         <small>${price}</small>
       </th>

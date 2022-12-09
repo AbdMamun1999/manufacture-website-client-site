@@ -36,8 +36,8 @@ const Review = ({ product }) => {
         const reviewNumber = parseInt(number)
         /* const reviews = { productId: _id, name, userName, userEmail, comments,img } */
         const review = { userImg: user?.photoURL, name: user?.displayName, comments, reviewNumber, date}
-        console.log(review)
-        fetch(`https://agile-dawn-56972.herokuapp.com/reviews`, {
+        
+        fetch(`https://manufacture-old-production.up.railway.app/reviews`, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

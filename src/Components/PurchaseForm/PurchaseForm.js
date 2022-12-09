@@ -9,7 +9,7 @@ const PurchaseForm = ({ product }) => {
     const [quantityError, setQuantityError] = useState('')
     const [quantity, setQuantity] = useState('')
     const { _id, name, available_quantity, minimum_quantity, price, img } = product;
-    console.log(price)
+    
 
     const handleChange = e => {
         const value = e.target.value
@@ -46,8 +46,8 @@ const PurchaseForm = ({ product }) => {
             return;
         } else {
             // const { data } = axios.post(`http://localhost:5000/orders`,  purchaseInfo )
-            // console.log(data)
-            fetch('https://agile-dawn-56972.herokuapp.com/orders', {
+            
+            fetch('https://manufacture-old-production.up.railway.app/orders', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json',

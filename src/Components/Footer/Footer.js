@@ -27,14 +27,14 @@ const Footer = () => {
           <Link to='/' className="link link-hover">Cookie policy</Link>
         </div>
         <div>
-          <di>
+          <div>
             <div className='mb-5'>
               <h2 className='text-3xl mt-5 lg:mt-0'>Location</h2>
               <p className='mt-3 font-bold'>151/7(3 and 4 floor), green road <br /> panthapath,Dhaka</p>
             </div>
             <div>
-              <span class="footer-title block">Follow Us</span>
-              <div class="grid grid-flow-col gap-4">
+              <span className="footer-title block">Follow Us</span>
+              <div className="grid grid-flow-col gap-4">
 
                 <a href='#'>
                   <FaFacebookSquare style={{ fontSize: '30px' }}></FaFacebookSquare >
@@ -50,10 +50,10 @@ const Footer = () => {
                 </a>
               </div>
             </div>
-          </di>
+          </div>
         </div>
       </footer>
-      <footer class="footer footer-center p-4 bg-base-300 text-base-content">
+      <footer className="footer footer-center p-4 bg-base-300 text-base-content">
         <div>
           <p>Copyright © 2022 - All right reserved super max tools</p>
         </div>

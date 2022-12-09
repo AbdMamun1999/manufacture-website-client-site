@@ -13,7 +13,7 @@ const ManageAllOrder = ({ order }) => {
   } = order;
 
   const handlePlaced = () => {
-    fetch(`https://agile-dawn-56972.herokuapp.com/allorders/${_id}`, {
+    fetch(`https://manufacture-old-production.up.railway.app/allorders/${_id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",
@@ -22,7 +22,7 @@ const ManageAllOrder = ({ order }) => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data, "handlePlaced");
+        
       });
   };
 

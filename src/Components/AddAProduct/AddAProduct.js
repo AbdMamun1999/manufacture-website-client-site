@@ -31,7 +31,7 @@ const AddAProduct = () => {
                         description,
                     }
 
-                    fetch('https://agile-dawn-56972.herokuapp.com/product', {
+                    fetch('https://manufacture-old-production.up.railway.app/product', {
                         method: "POST",
                         headers: {
                             'content-type': 'application/json',

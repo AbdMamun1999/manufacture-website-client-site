@@ -9,7 +9,7 @@ const useToken = (user) => {
         const currentUser = {email:email}
 
         if(email){
-           fetch(`https://agile-dawn-56972.herokuapp.com/users/${email}`,{
+           fetch(`https://manufacture-old-production.up.railway.app/users/${email}`,{
                method:'PUT',
                headers:{
                    'content-type':'application/json'

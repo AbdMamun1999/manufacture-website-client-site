@@ -9,7 +9,7 @@ const MyOrder = () => {
   const [user,loading] = useAuthState(auth)
 
   const { data: orders, isLoading, refetch} = useQuery(['orders',user], () =>
-    fetch(`https://agile-dawn-56972.herokuapp.com/orders/${user?.email}`).then(res =>
+    fetch(`https://manufacture-old-production.up.railway.app/orders/${user?.email}`).then(res =>
       res.json()
     )
   )

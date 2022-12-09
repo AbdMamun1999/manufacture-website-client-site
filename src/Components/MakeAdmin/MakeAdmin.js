@@ -9,7 +9,7 @@ const MakeAdmin = () => {
     const [users, setUsers] = useState([])
 
     useEffect(() => {
-        fetch('https://agile-dawn-56972.herokuapp.com/users', {
+        fetch('https://manufacture-old-production.up.railway.app/users', {
             method: 'GET',
             headers: {
                 'authorization': `Bearer ${localStorage.getItem('accessToken')}`
@@ -20,7 +20,7 @@ const MakeAdmin = () => {
     }, [users])
 
     const handleMakeAdmin = async email => {
-        fetch(`https://agile-dawn-56972.herokuapp.com/users/admin/${email}`, {
+        fetch(`https://manufacture-old-production.up.railway.app/users/admin/${email}`, {
             method: 'PUT',
             headers: {
                 'authorization': `Bearer ${localStorage.getItem('accessToken')}`

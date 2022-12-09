@@ -5,7 +5,7 @@ const HomePageReviews = () => {
 
       const [reviews, setReviews] = useState([])
     useEffect(() => {
-        fetch('https://agile-dawn-56972.herokuapp.com/reviews')
+        fetch('https://manufacture-old-production.up.railway.app/reviews')
             .then(res => res.json())
             .then(data => setReviews(data))
     }, []) 

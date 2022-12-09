@@ -20,7 +20,7 @@ const MyProfile = () => {
         const { educationLevel, educationalInstitute, linkdinLink, location, phone } = data;
         const userInfo = { userName, userEmail, educationLevel, educationalInstitute, linkdinLink, location, phone }
 
-        fetch(`https://agile-dawn-56972.herokuapp.com/users/${userEmail}`, {
+        fetch(`https://manufacture-old-production.up.railway.app/users/${userEmail}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json',
