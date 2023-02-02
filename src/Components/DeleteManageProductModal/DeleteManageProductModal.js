@@ -4,7 +4,7 @@ const DeleteManageProductModal = ({ setDeleteProduct, id }) => {
 
 
     const handleDelete = () => {
-        fetch(`https://manufacture-old-production.up.railway.app/allproducts/${id}`, {
+        fetch(`https://manufacture-old.vercel.app/allproducts/${id}`, {
             method: 'DELETE',
             headers: {
                 'content-type': 'application/json',

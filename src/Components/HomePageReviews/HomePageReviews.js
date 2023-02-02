@@ -5,12 +5,12 @@ const HomePageReviews = () => {
 
       const [reviews, setReviews] = useState([])
     useEffect(() => {
-        fetch('https://manufacture-old-production.up.railway.app/reviews')
+        fetch('https://manufacture-old.vercel.app/reviews')
             .then(res => res.json())
             .then(data => setReviews(data))
     }, []) 
 
-    console.log(reviews)
+    
     return (
 
        <>

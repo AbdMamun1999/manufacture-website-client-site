@@ -17,7 +17,7 @@ const Payment = () => {
     const { orderId } = useParams()
 
     useEffect(() => {
-        fetch(`https://manufacture-old-production.up.railway.app/order/${orderId}`)
+        fetch(`https://manufacture-old.vercel.app/order/${orderId}`)
             .then(res => res.json())
             .then(data => setOrder(data))
     }, [orderId])

@@ -5,7 +5,7 @@ const ManageAllOrders = () => {
   const [allOrders, setAllOrders] = useState([]);
 
   useEffect(() => {
-    fetch("https://manufacture-old-production.up.railway.app/allorders")
+    fetch("https://manufacture-old.vercel.app/allorders")
       .then((res) => res.json())
       .then((data) => setAllOrders(data));
   }, [allOrders]);

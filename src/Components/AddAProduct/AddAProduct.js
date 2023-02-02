@@ -31,7 +31,7 @@ const AddAProduct = () => {
                         description,
                     }
 
-                    fetch('https://manufacture-old-production.up.railway.app/product', {
+                    fetch('https://manufacture-old.vercel.app/product', {
                         method: "POST",
                         headers: {
                             'content-type': 'application/json',

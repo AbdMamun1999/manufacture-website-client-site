@@ -8,7 +8,7 @@ const DisplayProfile = () => {
     const [user, loading] = useAuthState(auth)
 
     useEffect(() => {
-        fetch(`https://manufacture-old-production.up.railway.app/users/${user?.email}`)
+        fetch(`https://manufacture-old.vercel.app/users/${user?.email}`)
             .then(res => res.json())
             .then(data => setUsers(data))
     }, [users,user])

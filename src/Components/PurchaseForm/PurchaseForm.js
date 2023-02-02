@@ -47,7 +47,7 @@ const PurchaseForm = ({ product }) => {
         } else {
             // const { data } = axios.post(`http://localhost:5000/orders`,  purchaseInfo )
             
-            fetch('https://manufacture-old-production.up.railway.app/orders', {
+            fetch('https://manufacture-old.vercel.app/orders', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json',

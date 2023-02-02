@@ -13,7 +13,7 @@ const ManageAllOrder = ({ order }) => {
   } = order;
 
   const handlePlaced = () => {
-    fetch(`https://manufacture-old-production.up.railway.app/allorders/${_id}`, {
+    fetch(`https://manufacture-old.vercel.app/allorders/${_id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",

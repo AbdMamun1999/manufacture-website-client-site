@@ -48,7 +48,7 @@ const Login = () => {
     if (token) {
         navigate(from, { replace: true });
     }
-    console.log(token,'token')
+    
 
     return (
         <div className="hero min-h-screen bg-base-200">

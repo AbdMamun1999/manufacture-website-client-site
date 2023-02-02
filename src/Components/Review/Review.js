@@ -37,7 +37,7 @@ const Review = ({ product }) => {
         /* const reviews = { productId: _id, name, userName, userEmail, comments,img } */
         const review = { userImg: user?.photoURL, name: user?.displayName, comments, reviewNumber, date}
         
-        fetch(`https://manufacture-old-production.up.railway.app/reviews`, {
+        fetch(`https://manufacture-old.vercel.app/reviews`, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

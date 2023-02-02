@@ -16,7 +16,7 @@ const CheckoutForm = ({ order }) => {
     // Create PaymentIntent as soon as the page loads
     if (purchasePrice) {
       fetch(
-        "https://manufacture-old-production.up.railway.app/create-payment-intent",
+        "https://manufacture-old.vercel.app/create-payment-intent",
         {
           method: "POST",
           headers: {
@@ -85,7 +85,7 @@ const CheckoutForm = ({ order }) => {
         order: _id,
         transactionId: paymentIntent.id,
       };
-      fetch(`https://manufacture-old-production.up.railway.app/orders/${_id}`, {
+      fetch(`https://manufacture-old.vercel.app/orders/${_id}`, {
         method: "PATCH",
         headers: {
           "content-type": "application/json",
